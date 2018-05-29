@@ -1,0 +1,132 @@
+.tooltip {
+  div,
+  h2 {
+    text-align: left;
+  }
+
+  .tooltip-inner {
+    background-color: $white;
+    border-top: 6px solid $blue-light;
+    box-shadow: 0 0 10px $shadow-deep;
+    color: $black;
+    padding: 1em;
+    min-width: 300px;
+  }
+  &.in {
+    opacity: 1;
+  }
+  &.top {
+    margin-top: -0.6em;
+
+    .tooltip-arrow {
+      border-top-color: $white;
+      transform: scale(5,4);
+    }
+  }
+
+  &.right {
+    margin-left: 0.6em;
+
+    .tooltip-arrow {
+      border-right-color: $white;
+      transform: scale(4,5);
+    }
+  }
+
+  &.bottom {
+    margin-top: 0.6em;
+
+    .tooltip-arrow {
+      border-bottom-color: $white;
+      transform: scale(5,4);
+    }
+  }
+
+  &.left {
+    margin-left: -0.6em;
+
+    .tooltip-arrow {
+      border-left-color: $white;
+      transform: scale(4,5);
+    }
+  }
+}
+
+[data-toggle='tooltip'] {
+  display: block;
+  margin-bottom: 0.5em;
+}
+
+@media (min-width: $screen-sm-min) {
+  [data-toggle='tooltip'] {
+    display: inline-block;
+    margin-bottom: 0;
+  }
+}
+
+/*.tooltip{
+  background-color: $white;
+  border-top: 6px solid $blue-light;
+  box-shadow: 0 0 10px $shadow-deep;
+  left: 0;
+  margin-top: 10px;
+  opacity: 1;
+  padding: 1em;
+  position: absolute;
+  top: 20px;
+
+  > hr {
+    background-color: $gray-light;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+  }
+
+  &-body {
+    padding-top: 1em;
+
+    &-content {
+
+      @include font-family('Arial', 1em);
+      color: $gray;
+    }
+  }
+
+  &-container {
+    position: relative;
+  }
+
+  &-close {
+    display: inline-block;
+    float: right;
+
+    i {
+      vertical-align: top;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-header {
+
+    @include font-family('Arial Bold');
+    display: inline-block;
+    padding-bottom: 1em;
+
+    &-content {
+      color: $blue;
+      font-size: 1.571em;
+      margin: 0;
+      vertical-align: top;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .tooltip {
+    min-width: 350px;
+  }
+}
+*/

@@ -1,0 +1,102 @@
+<h4 class="col-xs-12">Toggle Selector</h4>
+<div class="col-xs-12">
+  <div class="toggle-title">Toggle Title</div>
+  <div class="btn-group btn-group-toggle" role="group">
+    <button type="button" class="btn btn-secondary">Yes</button>
+    <button type="button" class="btn btn-secondary">No</button>
+  </div>
+</div>
+
+<h4 class="col-xs-12 demo-pad-top">Multiple buttons:</h4>
+<div class="col-xs-12">
+  <div class="toggle-title">Toggle Title</div>
+  <div class="btn-group btn-group-toggle" role="group">
+    <button type="button" class="btn btn-secondary">0</button>
+    <button type="button" class="btn btn-secondary">1 to 10</button>
+    <button type="button" class="btn btn-secondary">10 to 50</button>
+    <button type="button" class="btn btn-secondary">If you have more than 50 employees long box</button>
+  </div>
+</div>
+
+<h4 class="col-xs-12 demo-pad-top">Toggle Selector(radio):</h4>
+<div class="col-xs-12">
+  <div class="form-group">
+    <div class="toggle-title">Toggle Title</div>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-secondary">
+          <input type="radio" name="toggle-selector-1" autocomplete="off"> Yes
+        </label>
+      <label class="btn btn-secondary">
+          <input type="radio" name="toggle-selector-1" autocomplete="off"> No
+        </label>
+    </div>
+  </div>
+  {{#if showcode}}
+  <pre class="pre-scrollable"><code class="html">
+&lt;div class="form-group"&gt;
+  &lt;div class="toggle-title"&gt;Toggle Title&lt;/div&gt;
+  &lt;div class="btn-group btn-group-toggle" data-toggle="buttons"&gt;
+  &lt;label class="btn btn-secondary"&gt;
+        &lt;input type="radio" name="toggle-selector-1" autocomplete="off"&gt; Yes
+      &lt;/label&gt;
+    &lt;label class="btn btn-secondary"&gt;
+        &lt;input type="radio" name="toggle-selector-1" autocomplete="off"&gt; No
+      &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+  </code></pre>{{/if}}
+</div>
+
+<h4 class="col-xs-12 demo-pad-top">Toggle Selector(radio disabled) :</h4>
+<div class="col-xs-12">
+  <div class="form-group">
+    <div class="toggle-title">Toggle Title</div>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-secondary" disabled>
+          <input type="radio" name="toggle-selector-1" autocomplete="off" disabled> Yes
+        </label>
+      <label class="btn btn-secondary" disabled>
+          <input type="radio" name="toggle-selector-1" autocomplete="off" disabled> No
+        </label>
+    </div>
+  </div>
+  {{#if showcode}}
+  <pre class="pre-scrollable"><code class="html">&lt;div class="form-group"&gt;
+  &lt;div class="toggle-title"&gt;Toggle Title&lt;/div&gt;
+  &lt;div class="btn-group btn-group-toggle" data-toggle="buttons"&gt;
+  &lt;label class="btn btn-secondary" disabled&gt;
+        &lt;input type="radio" name="toggle-selector-1" autocomplete="off" disabled&gt; Yes
+      &lt;/label&gt;
+    &lt;label class="btn btn-secondary" disabled&gt;
+        &lt;input type="radio" name="toggle-selector-1" autocomplete="off" disabled&gt; No
+      &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+  </code></pre>{{/if}}
+</div>
+
+<div class="col-xs-12">
+  <div class="form-group">
+    <div class="toggle-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, metus eget.<i class="icon icon-more-information"></i></div>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-secondary">
+          <input type="radio" name="toggle-selector-111" autocomplete="off"> Yes
+        </label>
+      <label class="btn btn-secondary">
+          <input type="radio" name="toggle-selector-122" autocomplete="off"> No
+        </label>
+    </div>
+  </div>
+{{#if showcode}}<pre class="pre-scrollable"><code class="html">
+&lt;div class="form-group"&gt;
+  &lt;div class="toggle-title"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, metus eget.&lt;i class="icon icon-more-information"&gt;&lt;/i&gt;&lt;/div&gt;
+  &lt;div class="btn-group btn-group-toggle" data-toggle="buttons"&gt;
+    &lt;label class="btn btn-secondary"&gt;
+        &lt;input type="radio" name="toggle-selector-111" autocomplete="off"&gt; Yes
+      &lt;/label&gt;
+    &lt;label class="btn btn-secondary"&gt;
+        &lt;input type="radio" name="toggle-selector-122" autocomplete="off"&gt; No
+      &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>{{/if}}
+</div>

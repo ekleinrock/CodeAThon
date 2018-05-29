@@ -1,0 +1,48 @@
+<h4>Horizontal Input Fields</h4>
+
+<!--
+<div class="col-sm-12">
+    <div class="form-group has-feedback has-error has-danger">
+      <label for="name" class="control-label"><small>Name</small></label>
+      <input type="text" class="form-control" id="name" name="name" required="">
+      <span class="icon icon-attention form-control-feedback glyphicon-remove" aria-hidden="true"><i class="fa fa-caret-down"></i></span>
+      <small class="help-block with-errors"><ul class="list-unstyled"><li>Please fill out this field.</li></ul></small>
+    </div>
+</div>
+-->
+<h5>Required Fields:</h5>
+<div class="col-sm-12">
+  {{#> form/input/text
+  name="Horizontal1"
+  label="This is an example of a long form and horizontally oriented label for a form field"
+  horizontal="true"
+  placeholder="Optional field value"
+  required="true"}}{{/form/input/text}}
+
+</div>
+<div class="col-sm-12">
+  {{#> form/input/select
+  name="HorizSelect"
+  label="This is an example of a long form and horizontally oriented label for a select field with the STANDARD version of the help icon"
+  horizontal="true"
+  required="true"}}{{/form/input/select}}
+</div>
+<div class="col-sm-12">
+  {{#> form/input/select-alt
+  name="HorizSelectAlt"
+  label="This is an example of a long form and horizontally oriented label for a select field with the ALT version of the help icon"
+  horizontal="true"
+  required="true"}}{{/form/input/select-alt}}
+</div>
+<div class="col-sm-12">
+  {{#> form/input/password horizontal="true"}}{{/form/input/password}}
+</div>
+<div class="col-sm-12">
+  {{#> form/input/credit-card horizontal="true"}}{{/form/input/credit-card}}
+</div>
+<div class="col-sm-12">
+  {{#> form/input/optional horizontal="true"}}{{/form/input/optional}}
+</div>
+<div class="col-sm-12">
+  {{#> form/input/percent horizontal="true"}}{{/form/input/percent}}
+</div>

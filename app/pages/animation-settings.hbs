@@ -1,0 +1,584 @@
+{{#> header/primary title="Animation: Settings"}}{{/header/primary}}
+  <body onload="init();" style="margin:0px;">
+    <style>
+
+
+    /* Default styling --------------------------
+    --------------------------------------------- */
+
+
+    p { width: 80%;line-height: 150%; }
+
+    .intro-copy {
+        margin: 60px 0;
+        display: block;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 20px;
+    }
+
+    .left {
+        width: 45%;
+        float: left;
+        margin-top: 40px;
+    }
+
+    .right {
+        width: 50%;
+        float: right;
+        margin-top: 40px;
+    }
+
+    .leftsmaller {
+        width: 20%;
+        float: left;
+        margin-top: 40px;
+    }
+
+    .rightbigger {
+        width: 75%;
+        float: right;
+        margin-top: 40px;
+    }
+
+    .clearfix:after {
+        display: block;
+        clear: both;
+        content:"";
+    }
+
+    .left h2, .right h2 {
+        color: #444;
+        font-weight: bold;
+    }
+
+    .module {
+        margin: 0 0 20px;
+        padding-bottom: 80px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .content-container {
+        width: 100%;
+        height: 260px;
+        display: block;
+        overflow: hidden;
+        border: 3px solid #ccc;
+        padding: 0 20px;
+        position: relative;
+    }
+
+    .content {
+        width: 100%;
+        height: 40px;
+        background: #eee;
+        display: block;
+        margin: 20px 0;
+    }
+
+    .content.small { width: 30%; }
+
+    .content.blue {
+        width: 20% !important;
+        background: #2a4c9e !important;
+    }
+
+    .content.orange {
+        width: 20% !important;
+        background: orange !important;
+        margin: 20px 0 20px 23px !important;
+    }
+
+    .markup {
+        height: 227px;
+        background: #f6f6f6;
+        display: block;
+        padding: 20px;
+    }
+
+
+    /* Content slide css styling ---------------------------
+    -------------------------------------------------------- */
+
+    .slideOne {
+        left: 20px;
+        width: 540px;
+        position: absolute;
+        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .slideTwo {
+        left: 100%;
+        width: 540px;
+        position: absolute;
+        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .slide:hover .slideOne {
+        left: -100%;
+        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .slide:hover .slideTwo {
+        left: 20px;
+        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+
+
+    /* Fade Content css styling ---------------------------
+    -------------------------------------------------------- */
+
+    .fadeContent {
+        top: 20%;
+        left: 20px;
+        width: 540px;
+        opacity: 0;
+        position: absolute;
+        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .fade:hover .fadeContent {
+        top: 0;
+        opacity: 1;
+        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+
+    /* Toggle css styling ---------------------------
+    -------------------------------------------------------- */
+
+    .toggle a {
+        display: inline-block;
+        border: 2px solid #ccc;
+        position: relative;
+        width: 185px;
+        height: 60px;
+        margin: 20px 0 0;
+        transform: scale(1);
+    }
+
+    .toggle a:after {
+        content:"";
+        display: block;
+        position: absolute;
+        width: 70px;
+        height: 25px;
+        background: #2a4c9e;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    .toggle a:last-of-type { border-left: none; }
+
+    .toggle a:hover {
+        background: #2a4c9e;
+        border-color: #2a4c9e;
+        transition: all .6s cubic-bezier(0.19, 1, 0.22, 1);
+        transform: scale(1.1);
+        z-index: 2;
+    }
+
+    .toggle a:hover:after {
+        background: white;
+        transition: all .6s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+
+    /* Flipcard css styling ---------------------------
+    -------------------------------------------------------- */
+
+    .flip-container {
+        perspective: 1000px;
+        position: absolute;
+        top: calc(50% - 100px);
+        left: calc(50% - 160px);
+    }
+
+    .flip-container:hover .flipper,
+    .flip-container.hover .flipper {
+        transform: rotateY(180deg);
+    }
+
+    .flip-container, .front, .back {
+        width: 295px;
+        height: 200px;
+    }
+
+    .flipper {
+        transition: 1s cubic-bezier(1, 0, 0, 1);
+        transform-style: preserve-3d;
+        position: relative;
+    }
+
+    .front, .back {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: white;
+        border: 1px solid #ccc;
+        box-shadow: 0 8px 6px -6px #777;
+    }
+
+    .front {
+        z-index: 2;
+        transform: rotateY(0deg);
+    }
+
+    .back {
+        transform: rotateY(180deg);
+        background: #2a4c9e;
+        border-color: #2a4c9e;
+    }
+
+    .front .content,
+    .back .content {
+        width: 85%;
+        margin: 20px auto;
+    }
+
+    .back .content { background: white; }
+
+
+    /* Pop Up css styling ---------------------------
+    -------------------------------------------------------- */
+
+    .popUp {
+        position: absolute;
+        width: 295px;
+        height: 200px;
+        top: calc(50% - 100px);
+        left: calc(50% - 160px);
+        background: white;
+        border: 2px solid #ccc;
+        padding: 0 20px;
+        opacity: 0;
+        transition: all .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        transform: scale(0.2);
+    }
+
+    .pop:hover .popUp {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+
+    /* Prettify CSS ---------------------------
+    -------------------------------------------------------- */
+
+    span { font-size: 14px; }
+    span.class { color: blue; }
+    span.bracket { color: #333; }
+    span.attribute { color: #FF66FF; display: block; text-indent: 20px; }
+
+
+    </style>
+    <div class="container">
+      <div class="row card">
+        <div class="col-xs-12">
+          <h1>HIG UX KIT : Animation: Settings</h1>
+
+          <p>Samples of Animation Settings - we will use these as baseline for other animations within the kit.  This page is just provided for reference purposes for developers of the kit.</a></p>
+
+        </div>
+      </div>
+      <div class="row card">
+        <div class="intro-copy">
+            <h1>Examples & Code</h1>
+            <h3>The following samples are simple examples of how the choreography of UX elements might "feel" within The Hartford's ecosystem of websites, apps and products.</h3>
+        </div>
+
+
+        <h2>UX Rhythym (Easing)</h2>
+        <p>In the real world, objects don't just start and stop instantly — and almost never move at a constant speed. To create fluid motion dynamics that feel natural, and compliment an interface — it is necessary to use easing. Below are recommended patterns for easing rhythyms to be used on experiences from The Hartford.</p>
+
+        <div class="module clearfix">
+            <div class="leftsmaller">
+                <h2>Ease Out (Exponential)</h2>
+                <img alt="ease back out" src="images/animation-samples/Ease_BackOut_Thumb.gif" />
+            </div>
+            <div class="rightbigger">
+              <p>The object will start fast and end slow easing into its destination. This is to be used when instant feedback is needed, as well as quick interactions such as pop ups and navigation open / closes
+</p>
+                <div class="markup">
+                  <span class="class">.example</span> <span class="bracket">{</span>
+                  <span class="attribute">-webkit-transition: all 600ms cubic-bezier(1, 0, 0, 1);</span>
+                  <span class="attribute">transition: all 600ms cubic-bezier(1, 0, 0, 1); }</span>
+                  <span class="bracket">}</span>
+
+                  <br>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="module clearfix">
+          <div class="leftsmaller">
+                <h2>Ease In Out (Exponential)</h2>
+                <img alt="ease back out" src="images/animation-samples/Ease_Linear_Thumb.gif" />
+            </div>
+            <div class="rightbigger">
+              <p>The object will start slow, get fast and end slow easing into its destination. This is only to be used with content transitions such as slide shows and content switching. Usually works best when there is a clear start and end point of whatever is being moved.</p>
+
+              <div class="markup">
+                <span class="class">.example</span> <span class="bracket">{</span>
+                <span class="attribute">-webkit-transition: all 600ms cubic-bezier(1, 0, 0, 1);</span>
+                <span class="attribute">transition: all 600ms cubic-bezier(1, 0, 0, 1); </span>
+
+                <span class="bracket">}</span>
+
+                <br>
+
+              </div>
+            </div>
+        </div>
+
+
+        <div class="module clearfix">
+          <div class="leftsmaller">
+                <h2>Back Out / Pop Out</h2>
+                <img alt="ease back out" src="images/animation-samples/EaseInOut_Expo_Thumb.gif" />
+            </div>
+            <div class="rightbigger">
+              <p>The object will quickly ease into, overshoot and come back to its destination creating a quick jumpy motion. Similar to a short bounce, this is to be used for visual excitement and to place emphasis on objects. Examples are dashboard navigation items changing their status from editing, to completed.</p>
+
+              <div class="markup">
+                <span class="class">.example</span> <span class="bracket">{</span>
+                <span class="attribute">-webkit-transition: all 600ms cubic-bezier(1, 0, 0, 1);</span>
+                <span class="attribute">transition: all 600ms cubic-bezier(1, 0, 0, 1); </span>
+
+                <span class="bracket">}</span>
+
+                <br>
+
+              </div>
+            </div>
+        </div>
+
+
+        <div class="module clearfix">
+          <div class="leftsmaller">
+                <h2>Linear / Continuous Movement</h2>
+                <img alt="ease back out" src="images/animation-samples/Ease_Linear_Thumb.gif" />
+            </div>
+            <div class="rightbigger">
+              <p>The object will remain at a constant speed for either a set or infinite amount of time. This techincally is not considered easing, but is still used as an easing type in code. Examples of this are continuously spinning objects such as loading icons.</p>
+
+              <div class="markup">
+                <span class="class">.example</span> <span class="bracket">{</span>
+                <span class="attribute">-webkit-transition: all 600ms cubic-bezier(1, 0, 0, 1);</span>
+                <span class="attribute"> transition: all 600ms cubic-bezier(1, 0, 0, 1); </span>
+                <span class="bracket">}</span>
+
+                <br>
+
+              </div>
+            </div>
+        </div>
+
+        <h2>Examples</h2>
+        <p>Hover to engage</p>
+
+        <div class="module clearfix">
+            <div class="left">
+                <h2>Content Slide</h2>
+                <div class="content-container slide">
+                    <div class="slides">
+                        <div class="slideOne">
+                            <div class="content"></div>
+                            <div class="content"></div>
+                            <div class="content"></div>
+                            <div class="content blue"></div>
+                        </div>
+
+                        <div class="slideTwo">
+                            <div class="content"></div>
+                            <div class="content"></div>
+                            <div class="content"></div>
+                            <div class="content blue"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <h2>CSS</h2>
+                <div class="markup">
+                    <span class="class">.slideOne, .slideTwo</span> <span class="bracket">{</span>
+                    <span class="attribute">1s cubic-bezier(0.19, 1, 0.22, 1);</span>
+                    <span class="bracket">}</span>
+
+                    <br>
+
+                    <span class="class">.slide:hover .slideOne</span> <span class="bracket">{</span>
+                    <span class="attribute">left: -100%;</span>
+                    <span class="attribute">1s cubic-bezier(0.19, 1, 0.22, 1);</span>
+                    <span class="bracket">}</span>
+
+                    <br>
+
+                    <span class="class">.slide:hover .slideTwo</span> <span class="bracket">{</span>
+                    <span class="attribute">left: 20px;</span>
+                    <span class="attribute">1s cubic-bezier(0.19, 1, 0.22, 1);</span>
+                    <span class="bracket">}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="module clearfix">
+            <div class="left">
+                <h2>FadeIn</h2>
+                <div class="content-container fade">
+                    <div class="fadeContent">
+                        <div class="content"></div>
+                        <div class="content"></div>
+                        <div class="content"></div>
+                        <div class="content blue"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <h2>CSS</h2>
+                <div class="markup">
+                    <span class="class">.fadeContent</span> <span class="bracket">{</span>
+                    <span class="attribute">top: 20%;</span>
+                    <span class="attribute">left: 20px;</span>
+                    <span class="attribute">opacity: 0;</span>
+                    <span class="attribute">position: absolute;</span>
+                    <span class="attribute">transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);</span>
+                    <span class="bracket">}</span>
+
+                    <br>
+
+                    <span class="class">.fade:hover .fadeContent</span> <span class="bracket">{</span>
+                    <span class="attribute">top: 0;</span>
+                    <span class="attribute">opacity: 1;</span>
+                    <span class="attribute">transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);</span>
+                    <span class="bracket">}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="module clearfix">
+            <div class="left">
+                <h2>Flip</h2>
+                <div class="content-container">
+                    <div class="flipContent">
+                        <div class="content small"></div>
+                        <div class="content"></div>
+                        <div class="content"></div>
+                        <div class="content"></div>
+                    </div>
+
+                    <div class="flip-container">
+                        <div class="flipper">
+                            <div class="front">
+                                <div class="content"></div>
+                                <div class="content"></div>
+                                <div class="content"></div>
+                            </div>
+                            <div class="back">
+                                <div class="content"></div>
+                                <div class="content"></div>
+                                <div class="content orange"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <h2>CSS</h2>
+                <div class="markup">
+                    <span class="class">.flip-container</span> <span class="bracket">{</span>
+                    <span class="attribute">perspective: 1000px;</span>
+                    <span class="bracket">}</span>
+
+                    <br>
+
+                    <span class="class">.flipper</span> <span class="bracket">{</span>
+                    <span class="attribute">transition: 1s cubic-bezier(1, 0, 0, 1);</span>
+                    <span class="attribute">transform-style: preserve-3d;</span>
+                    <span class="bracket">}</span>
+
+                    <br>
+
+                    <span class="class">.flip-container:hover .flipper</span> <span class="bracket">{</span>
+                    <span class="attribute">transform: rotateY(180deg);</span>
+                    <span class="bracket">}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="module clearfix">
+            <div class="left">
+                <h2>Pop Up</h2>
+                <div class="content-container pop">
+                    <div class="">
+                        <div class="content small"></div>
+                        <div class="content"></div>
+                        <div class="content"></div>
+                        <div class="content"></div>
+                    </div>
+                    <div class="popUp">
+                        <div class="content"></div>
+                        <div class="content"></div>
+                        <div class="content blue"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <h2>CSS</h2>
+                <div class="markup">
+                    <span class="class">.popUp</span> <span class="bracket">{</span>
+                    <span class="attribute">opacity: 0;</span>
+                    <span class="attribute">transition: all .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);</span>
+                    <span class="attribute">transform: scale(0.2);</span>
+                    <span class="bracket">}</span>
+
+                    <br>
+
+                    <span class="class">.pop:hover .popUp</span> <span class="bracket">{</span>
+                    <span class="attribute">opacity: 1;</span>
+                    <span class="attribute">transform: scale(1);</span>
+                    <span class="bracket">}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="module clearfix">
+            <div class="left">
+                <h2>Toggles</h2>
+                <div class="content-container">
+                    <div class="toggle">
+                        <div class="content"></div>
+                        <div class="content"></div>
+                        <a href="#"></a><a href="#"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <h2>CSS</h2>
+                <div class="markup">
+                    <span class="class">.toggle a</span> <span class="bracket">{</span>
+                    <span class="attribute">transform: scale(1);</span>
+                    <span class="bracket">}</span>
+
+                    <br>
+
+                    <span class="class">.toggle a:hover</span> <span class="bracket">{</span>
+                    <span class="attribute">transition: all .6s cubic-bezier(0.19, 1, 0.22, 1);</span>
+                    <span class="attribute">transform: scale(1.1);</span>
+                    <span class="bracket">}</span>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+  <script src="/app/js/sample-animation.js"></script>
+
+{{#> footer/primary}} {{/footer/primary}}
+{{#> footer/scripts}} {{/footer/scripts}}
+</body>
+</html>

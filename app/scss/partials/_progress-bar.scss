@@ -1,0 +1,125 @@
+.progress {
+  background-color: $white;
+  height: auto;
+
+  &-list {
+    border-bottom: 1px solid $gray-light;
+    border-left: 1px solid $gray-light;
+    border-right: 1px solid $gray-light;
+    border-top: 1px solid $gray-light;
+    display: flex;
+    list-style: none;
+    margin-bottom: 0;
+    padding: 1em;
+
+    &-item {
+      cursor: pointer;
+      display: inline-block;
+      flex-grow: 1;
+      position: relative;
+      text-align: center;
+
+      &-number {
+        background-color: darken($gray-background, 2%); // Results in #f2f2f2
+        border-radius: 100%;
+        display: inline-block;
+        height: 1.75em;
+        line-height: 1.75em;
+        text-align: center;
+        width: 1.75em;
+      }
+
+      &-text {
+        display: none;
+        padding-left: 0.5em;
+      }
+
+      &-number,
+      &-text {
+        color: $blue;
+        font-size: 0.875em;
+        margin: 0;
+      }
+
+      &.active {
+        > .progress-list-item {
+          flex-grow: 3;
+
+          &-number {
+            border: none;
+            background-color: $blue;
+            color: $white;
+          }
+
+          &-text {
+            display: inline-block;
+            font-weight: 600;
+          }
+        }
+
+        &:after,
+        &:before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          margin-left: -15%;
+          border-left: 2em solid transparent;
+          border-right: 2em solid transparent;
+        }
+
+        &:after {
+          top: 125%;
+          border-bottom: 0.714em solid $gray-background;
+        }
+
+        &:before {
+          top: 121%;
+          //TODO convert to calc?
+          border-bottom: 0.714em solid $gray-light;
+        }
+      }
+
+      &.completed {
+        .progress-list-item-number {
+          background-color: $gray-medium;
+          color: $white;
+        }
+
+        .progress-list-item-text {
+          font-weight: 600;
+          color: $gray;
+        }
+      }
+
+
+
+
+      &:hover:not(.active){
+        .progress-list-item {
+          &-number {
+            color: $white;
+            background-color: $blue-hover;
+            border-color: $blue-hover;
+          }
+
+          &-text {
+            color: $blue-hover;
+          }
+        }
+      }
+
+    }
+
+  }
+}
+@media (min-width: $screen-sm-min) {
+  .progress {
+    &-list {
+      &-item {
+        &-text {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

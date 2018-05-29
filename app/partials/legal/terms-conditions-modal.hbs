@@ -1,0 +1,52 @@
+<div class="row card">
+  <div class="col-xs-12">
+    By selecting "Enroll and Continue to My Account" below, you certify you have read and agree to the <a href="#" data-toggle="modal" data-target="#tc-modal">Terms and Conditions</a>. You will be enrolled in paperless delivery for all documents.
+  </div>
+  <div class="modal fade" id="tc-modal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content card offset">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><i class="icon icon-close"></i></button>
+          <div class="modal-title">eDelivery Terms and Conditions</div>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="comment" hidden></label>
+              <textarea class="form-control" rows="15" id="comment">
+                {{#> legal/terms-text}}{{/legal/terms-text}}
+              </textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>{{#if showcode}}
+<pre><code class="html">&lt;div class=&quot;row card&quot;&gt;
+  &lt;div class=&quot;col-xs-12&quot;&gt;
+    By selecting &quot;Enroll and Continue to My Account&quot; below, you certify you have read and agree to the &lt;a href=&quot;#&quot; data-toggle=&quot;modal&quot; data-target=&quot;#tc-modal&quot;&gt;Terms and Conditions&lt;/a&gt;. You will be enrolled in paperless delivery for all documents.
+  &lt;/div&gt;
+  &lt;div class=&quot;modal fade&quot; id=&quot;tc-modal&quot; role=&quot;dialog&quot;&gt;
+    &lt;div class=&quot;modal-dialog modal-lg&quot;&gt;
+      &lt;div class=&quot;modal-content card offset&quot;&gt;
+        &lt;div class=&quot;modal-header&quot;&gt;
+          &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot;&gt;&lt;i class=&quot;icon icon-close&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+          &lt;div class=&quot;modal-title&quot;&gt;eDelivery Terms and Conditions&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal-body&quot;&gt;
+          &lt;form&gt;
+            &lt;div class=&quot;form-group&quot;&gt;
+              &lt;label for=&quot;comment&quot; hidden&gt;&lt;/label&gt;
+              &lt;textarea class=&quot;form-control&quot; rows=&quot;15&quot; id=&quot;comment&quot;&gt;
+{{#> legal/terms-text}}{{/legal/terms-text}}
+              &lt;/textarea&gt;
+            &lt;/div&gt;
+          &lt;/form&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+{{/if}}

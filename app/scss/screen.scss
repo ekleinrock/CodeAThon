@@ -1,0 +1,142 @@
+//GLOABAL VARIABLE OVERRIDES
+@import "./partials/variables";
+
+// IMPORT CORE VARIABLES
+@import "bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "font-awesome/scss/variables";
+
+// BOOTSTRAP STYLESHEETS
+// =============================================================================
+
+@import "bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+// Reset and dependencies
+@import "bootstrap-sass/assets/stylesheets/bootstrap/normalize";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/print";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
+// Core CSS
+@import "bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/type";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/code";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/grid";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/tables";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/forms";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/carousel";
+
+// Components
+@import "bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/button-groups";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/navs";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/navbar";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/breadcrumbs";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/pagination";
+//@import "bootstrap-sass/assets/stylesheets/bootstrap/pager";
+//@import "bootstrap-sass/assets/stylesheets/bootstrap/labels";
+//@import "bootstrap-sass/assets/stylesheets/bootstrap/badges";
+//@import "bootstrap-sass/assets/stylesheets/bootstrap/jumbotron";
+//@import "bootstrap-sass/assets/stylesheets/bootstrap/thumbnails";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/alerts";
+//@import "bootstrap-sass/assets/stylesheets/bootstrap/progress-bars";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/media";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/list-group";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/panels";
+//@import "bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/popovers";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/wells";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/close";
+
+
+// Utility classes
+@import "bootstrap-sass/assets/stylesheets/bootstrap/utilities";
+@import "bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+
+//modal
+@import "bootstrap-sass/assets/stylesheets/bootstrap/modals";
+
+// FONTAWESOME STYLESHEETS
+// =============================================================================
+@import "font-awesome/scss/mixins";
+@import "font-awesome/scss/path";
+@import "font-awesome/scss/core";
+@import "font-awesome/scss/larger";
+@import "font-awesome/scss/fixed-width";
+@import "font-awesome/scss/list";
+@import "font-awesome/scss/bordered-pulled";
+@import "font-awesome/scss/animated";
+@import "font-awesome/scss/rotated-flipped";
+@import "font-awesome/scss/stacked";
+@import "font-awesome/scss/icons";
+@import "font-awesome/scss/screen-reader";
+
+// BS DATETIMEPICKER STYLESHEETS
+// =============================================================================
+@import "eonasdan-bootstrap-datetimepicker/src/sass/bootstrap-datetimepicker";
+
+// BS SELECT STYLESHEETS
+// =============================================================================
+@import "bootstrap-select/sass/bootstrap-select";
+
+// Dropzone STYLESHEETS
+// =============================================================================
+@import "dropzone/src/dropzone";
+
+// HIGUX STYLESHEETS
+// =============================================================================
+@import "./partials/mixins";
+@import "./partials/fonts";
+@import "./partials/typography";
+@import "./partials/footer";
+@import "./partials/body";
+@import "./partials/buttons";
+@import "./partials/security-message";
+@import "./partials/tooltip";
+@import "./partials/popover";
+@import "./partials/accordion";
+@import "./partials/table";
+@import "./partials/loading-patterns";
+@import "./partials/list-elements";
+@import "./partials/cards";
+@import "./partials/navs";
+@import "./partials/navbar";
+@import "./partials/messages";
+@import "./partials/media";
+@import "./partials/disclaimer-text";
+@import "./partials/progress-bar";
+@import "./partials/radial-progress-indicator";
+@import "./partials/content-alerts-messages";
+@import "./partials/intro-messaging";
+@import "./partials/marketing-container";
+@import "./partials/prop-section-carousel";
+@import "./partials/modal";
+@import "./partials/widget-child-containers";
+@import "./partials/video";
+@import "./partials/_upload-document";
+@import "./partials/_svg-sprites";
+@import "./partials/new-carousel";
+@import "./partials/sidebar";
+@import "./partials/code";
+@import "./partials/breadcrumbs";
+@import "./partials/autocomplete";
+@import "./partials/loading-pattern";
+@import "./partials/table/table-sortable";
+@import "./partials/legal/terms-and-conditions";
+@import "./partials/photo-gallery";
+@import "./partials/faqs";
+@import "./partials/glyphicon-polyfill";
+@import "./partials/pagination";
+@import "./partials/collapse";
+@import "./partials/forms";
+
+
+
+//CHOSEN-JS DEFAULT
+// =============================================================================
+@import "./partials/chosen/chosen";
+
+// HIGUX MULTISELECT ELEMENTS STYLESHEETS
+// =============================================================================
+@import "./partials/multiselect/multipanel-select";
+@import "./partials/multiselect/multiselect-tag";

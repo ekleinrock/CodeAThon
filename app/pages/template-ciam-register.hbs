@@ -1,0 +1,36 @@
+{{#> header/primary title="Templates/CIAM: Register"}}{{/header/primary}}
+  <div class="container">
+    <div class="row content-xp">
+      <div class="col-md-8 col-md-offset-2 card top xp2">
+        <form class="form-selectors" data-toggle="validator" role="form">
+          <h1>Welcome!</h1>
+          <p>Registration takes about 2 minutes and then you'll have instant access to your policy online.</p>
+          <div class="media">
+            <div class="media-left">
+              <i class="icon icon-attention"></i>
+            </div>
+            <div class="media-body">
+              <p>You'll use your billing ZIP code and your <a href="#">policy number</a> or <a href="#">billing account number</a> to register.</p>
+            </div>
+          </div>
+          {{#> form/input/email
+            placeholder=" "
+          }}<small class="help-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti nobis iure repellat impedit odit iste veritatis quos, commodi! Eaque voluptate consectetur minus debitis quas dolorem delectus ea, illo magni cupiditate.</small>
+          {{/form/input/email}}
+          {{#> form/input/email title="Confirm Email" placeholder=" "}}{{/form/input/email}}
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+              <button type="submit" class="btn btn-primary btn-lg btn-block">Next</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+    <div class="content-xp no-top text-center"><small>Invisible reCAPTCHA by Google Privacy Policy and Terms of Use.</small></div>
+  </div>
+
+{{#> footer/thin}} {{/footer/thin}}
+{{#> footer/scripts}} {{/footer/scripts}}
+</body>
+</html>

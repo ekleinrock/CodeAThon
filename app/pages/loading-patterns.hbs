@@ -1,0 +1,80 @@
+{{#> header/primary title="Loading Patterns"}} {{/header/primary}}
+  <div class="container">
+    <div class="row card">
+      <div class="col-md-12">
+        <h1>Loading Patterns:</h1>
+        <h2>Animated Loader</h2>
+        {{#> animated-loader showcode="true"}} {{/animated-loader}}
+      </div>
+    </div>
+    <div class="row card">
+      <div class="col-md-12">
+
+        <h2>Spinner Icon</h2>
+        <i class="icon icon-spinner icon-pulse"></i>
+        <span class="sr-only">Loading...</span>
+        <br>
+<pre class="pre-scrollable"><code class="html">&lt;i class="icon icon-spinner icon-pulse"&gt;&lt;/i&gt;
+&lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+</code></pre>
+</div>
+</div>
+<div class="row card">
+  <div class="col-md-12">
+    <h2>Button with Loading Spinner</h2>
+  </div>
+      <div class="col-sm-4">
+        <h5>Primary Btn</h5>
+        <button type="button" class="btn btn-primary btn-block btn-load" id="load-primary" data-loading-text="<i class='fa fa-spinner fa-pulse fa-btn'></i> Saving">Save</button>
+        <br><pre class="pre-scrollable"><code class="html">&lt;button type="button" class="btn btn-primary btn-block btn-load" id="load-primary" data-loading-text="&lt;i class='fa fa-spinner fa-pulse fa-btn'&gt;&lt;/i&gt; Saving"&gt;Save&lt;/button&gt;</code></pre>
+      </div>
+
+      <p class="visible-xs">&nbsp;</p>
+
+      <div class="col-sm-4">
+        <h5>Secondary Btn</h5>
+        <button type="button" class="btn btn-secondary btn-block btn-load" id="load-secondary" data-loading-text="<i class='fa fa-spinner fa-pulse fa-btn'></i> Saving">Save</button>
+        <br><pre class="pre-scrollable"><code class="html">&lt;button type="button" class="btn btn-secondary btn-block btn-load" id="load-secondary" data-loading-text="&lt;i class='fa fa-spinner fa-pulse fa-btn'&gt;&lt;/i&gt; Saving"&gt;Save&lt;/button&gt;</code></pre>
+      </div>
+
+      <p class="visible-xs">&nbsp;</p>
+
+      <div class="col-sm-4">
+        <h5>Secondary-Paired Btn</h5>
+        <button type="button" class="btn btn-secondary-paired btn-block btn-load" id="load-tertiary" data-loading-text="<i class='fa fa-spinner fa-pulse fa-btn'></i> Saving">Save</button>
+        <br><pre class="pre-scrollable"><code class="html">&lt;button type="button" class="btn btn-secondary-paired btn-block btn-load" id="load-tertiary" data-loading-text="&lt;i class='fa fa-spinner fa-pulse fa-btn'&gt;&lt;/i&gt; Saving"&gt;Save&lt;/button&gt;</code></pre>
+      </div>
+    </div>
+    <div class="row card">
+      <div class="col-md-12">
+        <h2>Context Example</h2>
+      <div class="row">
+        <div class="col-xs-9">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultricies venenatis turpis vel venenatis. Vivamus dignissim augue sit amet mollis congue.
+        </div>
+        <div class="col-xs-1">
+          <i class="fa fa-spinner fa-pulse"></i>
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <br><pre class="pre-scrollable"><code class="html">&lt;div class="col-xs-9"&gt;
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultricies venenatis turpis vel venenatis. Vivamus dignissim augue sit amet mollis congue.
+&lt;/div&gt;
+&lt;div class="col-xs-1"&gt;
+  &lt;i class="fa fa-spinner fa-pulse"&gt;&lt;/i&gt;
+  &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{#> footer/primary}} {{/footer/primary}}
+{{#> footer/scripts}} {{/footer/scripts}}
+</body>
+</html>
+

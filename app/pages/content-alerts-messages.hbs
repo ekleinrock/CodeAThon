@@ -1,0 +1,71 @@
+{{#> header/primary title="Content-Level Alerts and Messages"}}{{/header/primary}}
+  <div class="container">
+    <div class="row card">
+      <h1>HIG UX KIT : Content-Level Alerts and Messages</h1>
+      
+      <p>We use custom compnents to create the following contnet alerts and content messages. There are a few modifier classes to change the icon colors as needed. Classes <code>.information</code>, <code>.alert</code> and <code>.warning</code> will display respective colors when added to the <code>&lt;i&gt;</code> tag.</p>
+    </div>
+    <div class="row card">
+      <h2 class="underlined">Content Alerts:</h2>
+      <div class="col-md-4">
+        <div class="content-alert">
+          <i class="icon icon-alert-content-not-available"></i>
+          <h3 class="content-header">This information is temporarily unavailable.</h3>
+          <p class="content-description">Please try again later.</p>
+          <button class="btn btn-primary">Active Button State</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="content-alert">
+          <i class="icon icon-alert-content-not-available information"></i>
+          <h3 class="content-header">This information is temporarily unavailable.</h3>
+          <p class="content-description">Please try again later.</p>
+          <button class="btn btn-primary">Active Button State</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="content-alert">
+          <i class="icon icon-alert-content-not-available alert"></i>
+          <h3 class="content-header">The page you're looking for can't be found.</h3>
+          <p class="content-description">Start a new search to find what you're looking for.</p>
+          <button class="btn btn-primary">Active Button State</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="content-alert">
+          <i class="icon icon-alert-not-authorized warning"></i>
+          <h3 class="content-header">You need authorization to view this policy.</h3>
+          <p class="content-description">Please contact EBC Technical Support for assistance at 1-877-322-4833.</p>
+          <button class="btn btn-primary">Active Button state</button>
+        </div>
+      </div>
+    </div>
+    <div class="row card">
+      <h3>Code:</h3>
+      <script src="https://gist.github.thehartford.com/rywalsh/ac0f5bf26bd47bf3bd34e86e6f4dffcf.js"></script>
+    </div>
+    <div class="row card">
+      <h2 class="underlined">Content Messages:</h2>
+      <div class="col-md-4">
+        <div class="content-message">
+          <i class="icon icon-check-mark success"></i>
+          <h3 class="content-header">We have received your submission</h3>
+          <p class="content-description">You will receive a confirmation email shortly</p>
+          <div class="buttons">
+            <button class="btn btn-secondary-paired">My Account</button>
+            <button class="btn btn-primary">Submit Another</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row card">
+      <h3>Code:</h3>
+      <script src="https://gist.github.thehartford.com/rywalsh/ca77e2f16796dd89e9463058371d7207.js"></script>
+    </div>
+  </div>
+  
+{{#> footer/primary}} {{/footer/primary}}
+{{#> footer/scripts}} {{/footer/scripts}}
+</body>
+</html>
+

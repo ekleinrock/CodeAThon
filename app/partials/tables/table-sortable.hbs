@@ -1,0 +1,48 @@
+<div class="row card">
+  <div class="col-xs-12">
+    <h1>HIG UX KIT : Sortable Table</h1>
+    <ul>
+      <li>NPM Package: <a href="https://www.npmjs.com/package/bootstrap-table" target="_blank">Bootstrap Table</a></li>
+      <li>For more information, please navigate to <a href="https://github.com/wenzhixin/bootstrap-table">Bootstrap Table Github</a></li>
+      <li><b>Note:</b> When the sortable table goes < 768px it uses the select statement to select the category to sort by and that requires JS to be implemented, you can choose to implement based your needs but to see how we use it for this particular table please refer to app.js in the source.</li>
+    </ul>
+  </div>
+</div>
+<h2>Standard Sortable Table</h2>
+<div class="row card">
+  <div class="sortable-table-container">
+    <select class="table-category-sm">
+     <option value="date">Date</option>
+     <option value="author">Author</option>
+     <option value="notes">Notes</option>
+   </select>
+ </div>
+  <table class="table sortable-table" id="table">
+    <thead>
+      <tr>
+        <th data-field="date" data-sortable="true" class="colors col-xs-12 col-sm-3">Date <!-- <i class="fa fa-sort-asc" aria-hidden="true"></i> --></th>
+        <th data-field="author" data-sortable="true" class="colors col-xs-12 col-sm-2">Author</th>
+        <th data-field="notes" data-sortable="true" class="colors col-xs-12 col-sm-7">Notes</th>
+      </tr>
+    </thead>
+  </table>
+</div>{{#if showcode}}<pre><code class="html">&lt;h2&gt;Standard Sortable Table&lt;/h2&gt;
+&lt;div class="row card"&gt;
+  &lt;div class="sortable-table-container"&gt;
+    &lt;select class="table-category-sm"&gt;
+     &lt;option value="date"&gt;Date&lt;/option&gt;
+     &lt;option value="author"&gt;Author&lt;/option&gt;
+     &lt;option value="notes"&gt;Notes&lt;/option&gt;
+   &lt;/select&gt;
+ &lt;/div&gt;
+  &lt;table class="table sortable-table" id="table"&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th data-field="date" data-sortable="true" class="colors col-xs-12 col-sm-3"&gt;Created Date &lt;!-- &lt;i class="fa fa-sort-asc" aria-hidden="true"&gt;&lt;/i&gt; --&gt;&lt;/th&gt;
+        &lt;th data-field="author" data-sortable="true" class="colors col-xs-12 col-sm-2"&gt;Author&lt;/th&gt;
+        &lt;th data-field="notes" data-sortable="true" class="colors col-xs-12 col-sm-7"&gt;Notes&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+</code></pre>{{/if}}

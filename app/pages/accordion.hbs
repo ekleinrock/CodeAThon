@@ -1,0 +1,365 @@
+{{#> header/primary title="Accordions"}} {{/header/primary}}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 card">
+        <h1>HIG UX KIT : Accordions</h1>
+        <p>For usage, please refer to <a href="https://getbootstrap.com/docs/3.3/javascript/#collapse-example-accordion">Accordion - Bootstrap 3 Docs</a>.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container accordion-demo card">
+
+    <!--<div class="panel-group">
+      <div class="panel">
+        <div class="panel-heading panel-heading-closed">
+          <h3 class="panel-title">
+                    Panel title Default
+                    <i class="icon icon-caret-down pull-right"></i>
+                </h3>
+        </div>
+        <div class="panel-body collapse sub-panel">
+          Panel content
+          <div class="panel">
+            <div class="panel-heading panel-heading-closed">
+              <h3 class="panel-title">
+                            Sub Panel title
+                            <i class="icon icon-caret-down pull-right"></i>
+                        </h3>
+            </div>
+            <div class="panel-body collapse">Sub Panel content</div>
+          </div>
+          <div class="panel">
+            <div class="panel-heading panel-heading-closed">
+              <h3 class="panel-title">
+                            Sub Panel title
+                            <i class="icon icon-caret-down pull-right"></i>
+                        </h3>
+            </div>
+            <div class="panel-body collapse">
+              <p>Sub Panel content</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-heading panel-heading-closed">
+        <h3 class="panel-title">
+                Panel title Default
+                <i class="icon icon-caret-down pull-right"></i>
+            </h3>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-heading panel-heading-open">
+        <h3 class="panel-title">Panel title Active
+                <i class="icon icon-caret-up pull-right"></i>
+            </h3>
+      </div>
+      <div class="panel-body collapse sub-panel in">
+        <div>
+          <h3>Panel content</h3>
+          <p>Cupim tail brisket beef ribs jowl pork chop cow spare ribs. Ham chicken t-bone cow strip steak ribeye picanha landjaeger chuck salami buffalo. Spare ribs flank biltong, shoulder tongue porchetta prosciutto buffalo tail kielbasa pork chop chicken.
+            Pork loin bresaola sausage frankfurter landjaeger cow tail ham pig hamburger. Brisket burgdoggen tail frankfurter, biltong ham hock pork belly cow doner swine beef ribs. Jowl ground round beef andouille prosciutto shoulder biltong burgdoggen
+            tri-tip chicken. Boudin sausage flank, chicken kevin pastrami ground round strip steak tri-tip jerky capicola ball tip.</p>
+        </div>
+        <div class="panel">
+          <div class="panel-heading panel-heading-closed">
+            <h3 class="panel-title">
+                        Sub Panel title
+                        <i class="icon icon-caret-down pull-right"></i>
+                    </h3>
+          </div>
+          <div class="panel-body collapse">
+            <p>Sub Panel content</p>
+          </div>
+        </div>
+        <div class="panel">
+          <div class="panel-heading panel-heading-open">
+            <h3 class="panel-title">
+                        Sub Panel title
+                        <i class="icon icon-caret-up pull-right"></i>
+                    </h3>
+          </div>
+          <div class="panel-body collapse in">
+            <p> Sub Panel Content </p>
+            <p>
+              Biltong picanha ham hock landjaeger tri-tip, drumstick turkey pig cupim boudin. Bacon doner pastrami prosciutto frankfurter jowl ham. Pork chop drumstick tongue rump, chuck flank bacon short loin buffalo chicken landjaeger tail pork loin cupim. Ham venison
+              pork loin turkey doner kielbasa jowl boudin. Salami tenderloin ham, pastrami corned beef buffalo bresaola short ribs venison.
+            </p>
+            <p>
+              Prosciutto pig hamburger beef ribs pork biltong. Salami chicken strip steak, picanha porchetta t-bone jowl kevin turducken boudin prosciutto. Ribeye pork chop kielbasa alcatra. Meatloaf ground round pork belly capicola pancetta andouille picanha landjaeger
+              tail hamburger venison.
+            </p>
+            <p>
+              Flank turducken tri-tip bacon short loin. Turducken beef ribs ground round kevin, ball tip fatback sirloin buffalo bresaola tongue pastrami. Pork chop beef salami, strip steak tenderloin kielbasa pastrami ribeye ham hock beef ribs. Hamburger pork belly
+              kielbasa ribeye ball tip frankfurter jowl picanha tongue. Landjaeger ground round pig, ham buffalo beef bacon venison ham hock frankfurter burgdoggen. Buffalo ham hock bacon cupim salami.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-heading panel-heading-closed">
+        <h3 class="panel-title">
+                Panel title Default
+                <i class="icon icon-caret-down pull-right"></i>
+            </h3>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-heading panel-heading-closed">
+        <h3 class="panel-title">
+                Panel title Default
+                <i class="icon icon-caret-down pull-right"></i>
+            </h3>
+      </div>
+    </div>-->
+    <!--  Following would be a start of complete accordion example (working functionalities) -->
+    <h3 class="col-xs-12 clearfix">Working Accordion example: </h3>
+
+    <!-- normal panel - start -->
+    <div class="panel-group" id="accordion">
+      <div class="panel panel-primary">
+        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <span class="panel-title-text">Panel title one</span>
+              <i class="icon icon-caret-down pull-right"></i>
+            </h3>
+          </div>
+        </a>
+        <div id="collapseOne" class="panel-collapse collapse">
+          <div class="panel-body">
+            <div>
+              <h3>Panel content</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper dui, eu ornare sapien. Sed facilisis ipsum dictum nulla volutpat, vel dapibus erat efficitur. Sed maximus pharetra euismod. Etiam quis ipsum id nulla viverra mollis.
+                Morbi in finibus lorem. Sed ultricies blandit tortor, elementum lobortis purus tristique ut. Nunc eu metus eu augue eleifend ullamcorper eget eu metus. Quisque iaculis sem ac nulla ultricies facilisis.</p>
+            </div>
+            <div class="panel-group" id="subAccordionDefault1">
+              <div class="sub-panel sub-panel-primary">
+                <div class="panel">
+                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#subAccordionDefault1" href="#subcollapsedefault1">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">
+                              <i class="icon icon-car-secondary-option"></i>
+                              <div class="panel-title-text">Sub Panel title</div>
+                              <span class="pull-right"><i class="icon icon-caret-down"></i></span>
+                          </h3>
+                    </div>
+                  </a>
+                  <div id="subcollapsedefault1" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p> Sub Panel Content </p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper dui, eu ornare sapien. Sed facilisis ipsum dictum nulla volutpat, vel dapibus erat efficitur. Sed maximus pharetra euismod. Etiam quis ipsum id nulla viverra
+                        mollis. Morbi in finibus lorem. Sed ultricies blandit tortor, elementum lobortis purus tristique ut. Nunc eu metus eu augue eleifend ullamcorper eget eu metus. Quisque iaculis sem ac nulla ultricies facilisis.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sub-panel sub-panel-primary">
+                <div class="panel">
+                  <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#subAccordionDefault1" href="#subcollapsedefault11">
+                    <div class="panel-heading">
+                      <h3 class="panel-title">
+                              <i class="icon icon-car-secondary-option"></i>
+                              <div class="panel-title-text">Sub Panel title</div>
+                              <span class="pull-right"><i class="icon icon-caret-down"></i></span>
+                          </h3>
+                    </div>
+                  </a>
+                  <div id="subcollapsedefault11" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <p> Sub Panel Content </p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper dui, eu ornare sapien. Sed facilisis ipsum dictum nulla volutpat, vel dapibus erat efficitur. Sed maximus pharetra euismod. Etiam quis ipsum id nulla viverra
+                        mollis. Morbi in finibus lorem. Sed ultricies blandit tortor, elementum lobortis purus tristique ut. Nunc eu metus eu augue eleifend ullamcorper eget eu metus. Quisque iaculis sem ac nulla ultricies facilisis.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel-group" id="acc">
+        <div class="panel panel-primary">
+          <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#acc" href="#collapseTwo">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                <span class="panel-title-text">Panel title two</span>
+                <i class="icon icon-caret-down pull-right"></i>
+              </h3>
+            </div>
+          </a>
+          <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+              <div class="panel-content">
+                <h3>Panel content</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper dui, eu ornare sapien. Sed facilisis ipsum dictum nulla volutpat, vel dapibus erat efficitur. Sed maximus pharetra euismod. Etiam quis ipsum id nulla viverra mollis.
+                  Morbi in finibus lorem. Sed ultricies blandit tortor, elementum lobortis purus tristique ut. Nunc eu metus eu augue eleifend ullamcorper eget eu metus. Quisque iaculis sem ac nulla ultricies facilisis.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- primary panel - start -->
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Parent Subject Header</h3>
+        </div>
+        <div class="panel-body">
+          <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper dui, eu ornare sapien. Sed facilisis ipsum dictum nulla volutpat, vel dapibus erat efficitur. Sed maximus pharetra euismod. Etiam quis ipsum id nulla viverra mollis.
+              Morbi in finibus lorem. Sed ultricies blandit tortor, elementum lobortis purus tristique ut. Nunc eu metus eu augue eleifend ullamcorper eget eu metus. Quisque iaculis sem ac nulla ultricies facilisis.</p>
+          </div>
+          <div class="panel-group" id="subAccordionDefault">
+            <div class="sub-panel sub-panel-primary">
+              <div class="panel">
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#subAccordionDefault" href="#subcollapsedefault">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">
+                          <i class="icon icon-car-secondary-option"></i>
+                          <div class="panel-title-text">Sub Panel title</div>
+                          <span class="pull-right"><i class="icon icon-caret-down"></i></span>
+                      </h3>
+                  </div>
+                </a>
+                <div id="subcollapsedefault" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <p> Sub Panel Content </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper dui, eu ornare sapien. Sed facilisis ipsum dictum nulla volutpat, vel dapibus erat efficitur. Sed maximus pharetra euismod. Etiam quis ipsum id nulla viverra
+                      mollis. Morbi in finibus lorem. Sed ultricies blandit tortor, elementum lobortis purus tristique ut. Nunc eu metus eu augue eleifend ullamcorper eget eu metus. Quisque iaculis sem ac nulla ultricies facilisis.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sub-panel sub-panel-primary">
+              <div class="panel">
+                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#subAccordionDefault" href="#subcollapsedefault2">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">
+                          <i class="icon icon-car-secondary-option"></i>
+                          <div class="panel-title-text">Sub Panel title</div>
+                          <span class="pull-right"><i class="icon icon-caret-down"></i></span>
+                      </h3>
+                  </div>
+                </a>
+                <div id="subcollapsedefault2" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    <p> Sub Panel Content </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper dui, eu ornare sapien. Sed facilisis ipsum dictum nulla volutpat, vel dapibus erat efficitur. Sed maximus pharetra euismod. Etiam quis ipsum id nulla viverra
+                      mollis. Morbi in finibus lorem. Sed ultricies blandit tortor, elementum lobortis purus tristique ut. Nunc eu metus eu augue eleifend ullamcorper eget eu metus. Quisque iaculis sem ac nulla ultricies facilisis.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- primary panel - end -->
+    </div>
+    <!-- normal panel - end -->
+
+    <!-- panel w/ icon - start -->
+    <div class="panel-group">
+      <div class="panel panel-primary panel-with-icon">
+        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#customAccordion" href="#collapseCust">
+          <div class="panel-heading">
+            <i class="icon icon-car-secondary-option fa-3x"></i>
+            <h3 class="panel-title">
+              Panel title one
+              <span class="pull-right">
+                <i class="icon icon-caret-down"></i>
+              </span>
+            </h3>
+          </div>
+        </a>
+        <div id="collapseCust" class="panel-collapse collapse">
+          <div class="panel-body">
+            <div class="panel-content">
+              <h3>Panel content</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper dui, eu ornare sapien. Sed facilisis ipsum dictum nulla volutpat, vel dapibus erat efficitur. Sed maximus pharetra euismod. Etiam quis ipsum id nulla viverra mollis.
+                Morbi in finibus lorem. Sed ultricies blandit tortor, elementum lobortis purus tristique ut. Nunc eu metus eu augue eleifend ullamcorper eget eu metus. Quisque iaculis sem ac nulla ultricies facilisis.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-with-icon">
+        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#customAccordion" href="#collapseCust2">
+          <div class="panel-heading">
+            <i class="icon icon-car-secondary-option fa-3x"></i>
+            <h3 class="panel-title">
+              Panel title two
+              <span class="pull-right">
+                <i class="icon icon-caret-down"></i>
+              </span>
+            </h3>
+          </div>
+        </a>
+        <div id="collapseCust2" class="panel-collapse collapse">
+          <div class="panel-body">
+            <div class="panel-default-subject">
+
+              <div>
+                <h3>Panel content</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper dui, eu ornare sapien. Sed facilisis ipsum dictum nulla volutpat, vel dapibus erat efficitur. Sed maximus pharetra euismod. Etiam quis ipsum id nulla viverra mollis.
+                  Morbi in finibus lorem. Sed ultricies blandit tortor, elementum lobortis purus tristique ut. Nunc eu metus eu augue eleifend ullamcorper eget eu metus. Quisque iaculis sem ac nulla ultricies facilisis.</p>
+              </div>
+
+              <div class="panel-group" id="subAccordionDefault1">
+                <div class="sub-panel sub-panel-default">
+                  <div class="panel">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#subAccordionDefault1" href="#subcollapsedef1">
+                      <div class="panel-heading">
+                        <i class="icon icon-car-secondary-option"></i>
+                        <h3 class="panel-title">
+                          <div class="panel-title-text">Sub Panel title</div>
+                          <span class="pull-right"><i class="icon icon-caret-down"></i></span>
+                        </h3>
+                      </div>
+                    </a>
+                    <div id="subcollapsedef1" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p> Sub Panel Content </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper dui, eu ornare sapien. Sed facilisis ipsum dictum nulla volutpat, vel dapibus erat efficitur. Sed maximus pharetra euismod. Etiam quis ipsum id nulla viverra
+                          mollis. Morbi in finibus lorem. Sed ultricies blandit tortor, elementum lobortis purus tristique ut. Nunc eu metus eu augue eleifend ullamcorper eget eu metus. Quisque iaculis sem ac nulla ultricies facilisis.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sub-panel sub-panel-default">
+                  <div class="panel">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#subAccordionDefault1" href="#subcollapsedef2">
+                      <div class="panel-heading">
+                        <i class="icon icon-car-secondary-option"></i>
+                        <h3 class="panel-title">
+                                  <div class="panel-title-text">Sub Panel title</div>
+                                  <span class="pull-right"><i class="icon icon-caret-down"></i></span>
+                              </h3>
+                      </div>
+                    </a>
+                    <div id="subcollapsedef2" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <p> Sub Panel Content </p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut ullamcorper dui, eu ornare sapien. Sed facilisis ipsum dictum nulla volutpat, vel dapibus erat efficitur. Sed maximus pharetra euismod. Etiam quis ipsum id nulla viverra
+                          mollis. Morbi in finibus lorem. Sed ultricies blandit tortor, elementum lobortis purus tristique ut. Nunc eu metus eu augue eleifend ullamcorper eget eu metus. Quisque iaculis sem ac nulla ultricies facilisis.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- panel w/ icon - end -->
+  </div>
+  
+{{#> footer/primary}} {{/footer/primary}}
+{{#> footer/scripts}} {{/footer/scripts}}
+</body>
+</html>
+

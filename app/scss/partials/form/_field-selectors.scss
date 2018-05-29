@@ -1,0 +1,178 @@
+.form-group {
+  label {
+    font-weight: 500;
+    color: $blue;
+    font-size: 0.875em;
+  }
+  /* disabled styles - start */
+  #spinner {
+    &.input-disabled {
+      .spinner-addon {
+        background-color: $gray-light;
+
+        .icon {
+          color: $white;
+        }
+      }
+      input[disabled] {
+        background-color: $white;
+        border-color: $gray-light;
+      }
+    }
+  }
+  #datetimepicker1 {
+    &.input-disabled {
+      .date-picker-addon {
+        background-color: $gray-light;
+        border-color: $gray-light;
+
+        .icon {
+          color: $white;
+        }
+      }
+      input[disabled] {
+        background-color: $white;
+        border-color: $gray-light;
+      }
+    }
+  }
+  /* disabled styles - end */
+  input {
+    border-color: $blue;
+    height: 40px;
+
+    &[type="text"]{
+      &:active,
+      &:focus {
+        border-color: $blue;
+        outline: 0;
+        border: 1px solid #3A5A78;
+        box-shadow: 0 0 4px 1px rgba(36,119,191,0.5);
+      }
+    }
+  }
+
+  .date-picker-addon,
+  .spinner-addon {
+    .icon {
+      color: $white;
+    }
+  }
+
+  .datepicker {
+    .datepicker-days,
+    .datepicker-months,
+    .datepicker-years {
+      .active {
+        background-color: $blue;
+      }
+
+      .dow,
+      .icon,
+      .picker-switch {
+        color: $blue;
+      }
+    }
+  }
+}
+
+select {
+  &::-ms-expand {
+    /* IE 10+ (Note: appearance is not supported in IE)*/
+    display: none;
+  }
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  border-color: $blue;
+  //font-family: "FontAwesome";
+  font-family: "HCo Gotham", arial, sans-serif;
+  font-size: 1.143em;
+  height: 40px;
+
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+}
+
+select.select {
+  height: 50px;
+  background-color: $blue;
+  color: $white;
+
+  > option {
+    background-color: $white;
+    color: $blue;
+  }
+}
+
+label.custom-label-two:after {
+  content: "\e044";
+  position: absolute;
+  top: 34px;
+  right: 10px;
+  line-height: 30px;
+  padding: 1px 7px;
+  pointer-events: none;
+  font-family: "higux";
+  color: $white;
+}
+
+.has-success {
+  input,
+  select {
+    border-color: $blue;
+    box-shadow: none;
+    &[type="text"]{
+      &:active,
+      &:focus {
+        border-color: $blue;
+        outline: 0;
+        border: 1px solid #3A5A78;
+        box-shadow: 0 0 4px 1px rgba(36,119,191,0.5);
+      }
+    }
+  }
+
+  label {
+    color: $blue;
+  }
+}
+
+.has-success .form-control:focus {
+  box-shadow: none;
+}
+
+.has-error .form-control:focus {
+  border-color: $red-error;
+}
+
+.form-group.has-error {
+  input {
+    border-color: $red-error !important;
+    box-shadow: none !important;
+  }
+
+  label {
+    color: $red-error;
+  }
+
+  select {
+    border-color: $red-error;
+  }
+
+  .input-group-addon {
+    background-color: $red-error !important;
+  }
+
+  .custom-label-one:after,
+  select.select {
+    background-color: $red-error;
+  }
+
+  .form-control {
+    box-shadow: none;
+  }
+}

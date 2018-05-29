@@ -1,0 +1,399 @@
+
+.content-grid{
+  .row{
+    margin-bottom:30px;
+    
+    .grid-photo{
+      margin-bottom:0;
+    }
+    
+    :hover > .grid-photo{
+      outline:2px solid $blue-link;
+    }    
+    
+  }  
+  @media (max-width: $screen-sm-min) {
+    [class^=col-]{
+      padding-left:10px;
+      padding-right:10px;
+    }
+    .row{
+      margin-bottom:20px;
+    }
+  }
+  
+}
+
+
+
+
+
+
+
+/*doc
+---
+title: Carousel
+name: carousel-slick
+category: Widgets
+---
+The carousel widget is using Slick. Only modifications are style related, though we are using their base styles (not their theme).
+This was designed to have two carousels, one main viewer and one thumbnail carousel. These are linked together via our js file.
+The thumbnail version would not necessarily have to be used.
+Note that you can pass in a parameter on the URL to start at a certain slide: http://localhost:3000/generic-page-photo-gallery-viewer.html?DataPhotoId=123123123c
+For the second carousel, note an option/setting that is passed as a data attribute: data-slick='{"slidesToScroll":6}'
+Other settings can be passed by data attributes. Check Slick documentation for more:
+http://kenwheeler.github.io/slick/
+
+
+
+```html_example
+<article class="cw-default">
+  <div class="cw-body">
+      <div class="content-section">
+<div class="gallery-viewer-wrapper">  
+<div><span class="icon-arrow-left"><a href="generic-page-photo-gallery-grid.html">View Full Gallery</a></span></div>
+<h3>Here's a Header (optional)</h3>
+<div>Here's some (optional) body copy about this gallery of photos.</div>
+<div class="carousel-slick">
+
+           <div class="photo-item" data-photo-id="123123123a" >
+              <figure class="photo-img">
+                <img alt="Picture Number 1" src="images/photo-gallery/1.jpg">
+                <figcaption class="photo-heading">Picture Number 1</figcaption>
+              </figure>
+            </div>
+
+            <div class="photo-item" data-photo-id="123123123b">
+              <figure class="photo-img">
+                <img alt="Picture Number 2" src="images/photo-gallery/2.jpg">
+                <figcaption class="photo-heading">Picture Number 2</figcaption>
+              </figure>
+            </div>
+  
+</div>
+<div class="carousel-nav-slick" data-slick='{"slidesToScroll":6}'> 
+
+           <div >
+                <img alt="Picture Number 1" src="images/photo-gallery/1.jpg">
+            </div>
+
+            <div >
+                <img alt="Picture Number 2" src="images/photo-gallery/2.jpg">
+            </div>
+     
+</div>
+       </div> 
+        
+    </div>
+  </div>
+</article>
+```
+
+*/
+
+
+/*Slick Carousel - base styles*/
+
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+
+/*Slick Carousel - HIG Theme styles*/
+
+.gallery-viewer-wrapper{
+  border:1px solid $gray-light;
+  margin:20px 0;
+  
+  .carousel-slick{
+    margin-bottom:-1px;
+    margin-top:0;
+  }
+}
+
+.carousel-slick{
+  background-color:$gray-background;
+  margin-top:20px;
+  margin-bottom:20px;
+  border-bottom:1px solid $gray-light;
+ 
+ 
+  .slick-track{     
+      .photo-item{
+
+        .photo-img{
+          text-align:center;
+          max-height:100%;
+          img{
+            margin:0;
+            display:inline-block;
+            max-height:160px;
+
+            @media (min-width: 480px) {
+              max-height:290px;
+            }                
+            
+            @media (min-width: $screen-sm-min) {
+              max-height:430px;
+            }       
+
+            @media (min-width: $screen-md-min) {
+              max-height:490px; 
+            }  
+          }
+        
+          .photo-heading{
+            font-size:14px;
+            margin:14px;
+            text-align:center;
+          }
+        }
+      }
+  }
+  
+  .scroll-next,.scroll-previous{
+    position:absolute;
+    top:45%;
+    margin-top:-15px; 
+    z-index:100;
+    border:0;
+    line-height:45px;
+    font-size:45px;
+    width:45px;
+    height:45px;
+    text-align:center;
+    vertical-align:middle;
+    color:$blue;
+    background-color:transparent;
+    margin-bottom:0;
+    padding:0;
+
+    &:hover{
+      color:$blue-link;
+    }
+    &:focus{
+      outline:0;
+    }
+    
+    @media (min-width: $screen-sm-min) {
+
+    }  
+
+  }
+  .scroll-next{
+    text-align:right;
+    right:6px;
+    @media (min-width: $screen-sm-min) {
+      right:20px;
+    }          
+  }
+  .scroll-previous{
+    text-align:left;
+    left:6px;
+    @media (min-width: $screen-sm-min) {
+      left:20px;
+    }          
+  } 
+  
+}
+
+.carousel-slick + .carousel-nav-slick{
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+.carousel-nav-slick{
+  display:none;
+  padding-right:40px;
+  padding-left:40px;  
+  @media (min-width: 480px) {
+    display:block; 
+  }
+  @media (min-width: $screen-sm-min) {
+    margin-right:80px;
+    margin-left:80px;  
+  }   
+  
+  .slick-list{
+
+    .slick-track{ 
+      margin-top:2px;
+      margin-bottom:2px;
+
+      .slick-slide{
+        margin:0 2px;
+        cursor:pointer;
+                img{
+                  margin:0 auto;
+
+                  max-height:40px;
+
+                  @media (min-width: $screen-sm-min) {
+                    max-height:50px;
+                  }       
+
+                  @media (min-width: $screen-md-min) {
+                    max-height:60px; 
+                  }  
+                }
+        &.slick-active{
+          opacity:.65;
+        }
+      }
+    }
+  }
+  
+  .cycle-previous, .cycle-next{
+    position:absolute;
+    top:50%;
+    margin-top:-15px;
+    z-index:100;
+    border:0;
+    background-color:transparent;
+    line-height:30px;
+    font-size:30px;
+    width:30px;
+    height:30px;
+    text-align:center;
+    vertical-align:middle;
+    color:$blue;
+    margin-bottom:0;
+
+    &:hover{
+      color:$blue-link;
+    }
+    &:focus{
+      outline:0;
+    }       
+
+    @media (min-width: $screen-sm-min) {
+      width:40px;
+      height:40px;
+      line-height:40px;
+      margin-top:-20px;
+      font-size:30px;
+    }  
+  }
+  .cycle-next{
+    right:0;        
+  }
+  .cycle-previous{
+    left:0;       
+  }   
+
+}

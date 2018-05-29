@@ -1,0 +1,61 @@
+.select-label {
+  .icon {
+    position: absolute;
+    right: 0;
+  }
+}
+//select-container
+.select-container {
+  position: relative;
+  float: left;
+  width: 100%;
+  margin-bottom: 1.75em;
+
+  &:after {
+    content:"\e044";
+    font-family: "higux";
+    text-align: center;
+    line-height:38px;
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    background: $blue;
+    color: $white;
+    right: 0px;
+    top: 1px;
+    pointer-events: none;
+  }
+
+  select {
+    border-color: $blue;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 40px;
+
+    &::-ms-expand { /* IE 10+ (Note: appearance is not supported in IE)*/
+      display: none;
+    }
+    &::-ms-value { /* IE blue backgroud highlight fix per git issue #548 */
+      color: $gray;
+      background: none;
+    }
+  }
+  [disabled] {
+    background: #fff;
+    border-color: $gray-light;
+    color: $shadow-medium-deep;
+  }
+  &.input-disabled {
+    &:after {
+      background: $gray-light;
+    }
+  }
+}
+.form-group.has-error {
+  .select-container {
+    &:after {
+      background: $red-error;
+    }
+  }
+}

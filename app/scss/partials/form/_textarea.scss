@@ -1,0 +1,10 @@
+.form-group {
+  > textarea {
+    border-color: $blue;
+    
+    &[disabled] {
+      background-color: $white;
+      border-color: $gray-light;
+    }
+  }
+}

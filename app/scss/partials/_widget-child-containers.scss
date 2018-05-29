@@ -1,0 +1,48 @@
+.panel-default,
+.panel-primary {
+  border-color: $gray-light;
+  border-radius: 0;
+
+  .panel-heading {
+    background-color: $blue;
+    border-color: $gray-light;
+    border-radius: 0;
+    color: $white;
+  }
+
+  .panel-body {
+    color: $blue;
+  }
+}
+
+.panel-primary {
+  .panel-body {
+    border: 1px solid $gray-lighter;
+
+    > div:first-child {
+      padding: 1.429em 2em;
+    }
+
+    .panel-group {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.panel-default {
+  border: 0;
+  box-shadow: none;
+
+  .panel-body {
+    padding: 0;
+
+    .panel-default-subject {
+      padding: 1.429em 2em;
+      margin-top: 10px;
+      border: 1px solid $gray-light;
+      border-top: 7px solid $gray-light;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}

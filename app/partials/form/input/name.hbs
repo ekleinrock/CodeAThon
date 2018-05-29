@@ -1,0 +1,17 @@
+<div class="form-group has-feedback">
+  <label for="name" class="control-label{{#if horizontal}} col-md-6{{/if}}">Name</label>{{#if horizontal}}
+  <div class="col-md-6">{{/if}}
+  <input type="text" class="form-control" id="name" name="name" placeholder="Enter name here" data-error="Please enter your name." required  />
+  {{#> form/input/error}}{{/form/input/error}}{{#if horizontal}}
+  </div>{{/if}}
+</div>{{#if showcode}}
+<pre class="pre-scrollable"><code class="html">&lt;div class="form-group has-feedback"&gt;
+  &lt;label for="name" class="control-label{{#if horizontal}} col-md-6{{/if}}"&gt;Name&lt;/label&gt;{{#if horizontal}}
+  &lt;div class="col-md-6"&gt;{{/if}}
+  &lt;input type="text" class="form-control" id="name" name="name" placeholder="Enter name here" data-error="Please enter your name." required  /&gt;
+  &lt;span class="icon icon-attention form-control-feedback" aria-hidden="true"&gt;&lt;/span&gt;
+  &lt;div class="help-block with-errors"&gt;&lt;/div&gt;
+{{#if horizontal}}
+  &lt;/div&gt;{{/if}}
+&lt;/div&gt;
+</code></pre>{{/if}}

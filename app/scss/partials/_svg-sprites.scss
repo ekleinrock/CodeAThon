@@ -1,0 +1,92 @@
+.svg-icon {
+    font-size: 10px;
+}
+
+.svg-icon:before {
+    content:' ';
+    vertical-align:middle;
+    display: inline-block;
+    background-image: url("#{$icon-sprite-path}icon-sprite.svg");
+    background-repeat: no-repeat;
+    background-size: 51.303999999999995em 255.2em;
+}
+
+.no-svg .svg-icon:before {
+    background-image: url("#{$icon-sprite-path}icon-sprite.png");
+}
+
+
+
+  .svg-icon.AMEX-card:before {
+      background-position: 0em 0em;
+      width: 51.3em;
+      height: 31.860000000000003em;
+  }
+
+
+
+
+  .svg-icon.AMEX-card-grey:before {
+      background-position: 0em -31.9em;
+      width: 51.303999999999995em;
+      height: 31.857999999999997em;
+  }
+
+
+
+
+  .svg-icon.Discover-card:before {
+      background-position: 0em -63.8em;
+      width: 51.2em;
+      height: 31.810000000000002em;
+  }
+
+
+
+
+  .svg-icon.Discover-card-grey:before {
+      background-position: 0em -95.7em;
+      width: 51.2em;
+      height: 31.810000000000002em;
+  }
+
+
+
+
+  .svg-icon.MC-card:before {
+      background-position: 0em -127.6em;
+      width: 51.3em;
+      height: 31.860000000000003em;
+  }
+
+
+
+
+  .svg-icon.MC-card-grey:before {
+      background-position: 0em -159.5em;
+      width: 51.303999999999995em;
+      height: 31.862000000000002em;
+  }
+
+
+
+
+  .svg-icon.VISA-card:before {
+      background-position: 0em -191.4em;
+      width: 50.54em;
+      height: 31.883em;
+  }
+
+
+
+
+  .svg-icon.VISA-card-grey:before {
+      background-position: 0em -223.3em;
+      width: 50.54em;
+      height: 31.883em;
+  }
+
+
+
+
+

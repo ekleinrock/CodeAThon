@@ -1,0 +1,73 @@
+<h2>Standard Editable Table with Hover States</h2>
+<div class="row card">
+  <form data-toggle="validator" role="form">
+  <table class="table">
+    <thead>
+      <th class="col-xs-3">Label One</th>
+      <th class="col-xs-3">Label Two</th>
+      <th class="col-xs-3">Label Three</th>
+      <th class="col-xs-3"></th>
+    </thead>
+    <tbody>
+      <tr>
+          <td>
+            {{#> form/input/text
+              name="Data1"
+            placeholder="Data One"
+            required="true"}}{{/form/input/text}}
+          </td>
+          <td>
+            {{#> form/input/text
+              name="Data2"
+            placeholder="Data Two"
+            required="true"}}{{/form/input/text}}
+          </td>
+          <td>
+            {{#> form/input/select name="select-sample"}}{{/form/input/select}}
+            <div class="clearfix"></div>
+          </td>
+          <td class="delete-row">
+            <a href="#"><i class="icon icon-trash"></i><span>delete</span></a>
+            <div class="clearfix"></div>
+          </td>
+        </form>
+      </tr>
+      <tr>
+        <form class="form-selectors" role="form">
+          <td>
+            {{#> form/input/text
+              name="Data3"
+              placeholder="Data Three"
+              required="true"}}{{/form/input/text}}
+          </td>
+          <td>
+            {{#> form/input/text
+              name="Data4"
+              placeholder="Data Four"
+              required="true"}}{{/form/input/text}}
+          </td>
+          <td>
+            {{#> form/input/select name="select-sample"}}{{/form/input/select}}
+            <div class="clearfix"></div>
+          </td>
+          <td class="delete-row">
+            <a href="#"><i class="icon icon-trash"></i><span>delete</span></a>
+            <div class="clearfix"></div>
+          </td>
+
+      </tr>
+    </tbody>
+  </table>
+  <div class="row">
+    <div class="col-md-6">
+      {{#> button button-type="link" size="btn-lg" title="Previous"}}{{/button}}
+    </div>
+    <div class="col-md-3">
+      {{!-- {{#> button button-type="secondary-paired" size="btn-lg" block="true" title="Reset"}}{{/button}} --}}
+    </div>
+    <div class="col-md-3">
+      {{#> button button-type="primary" submit="true" size="btn-lg" block="true" title="Submit"}}{{/button}}
+    </div>
+  </div>
+  </form>
+</div>

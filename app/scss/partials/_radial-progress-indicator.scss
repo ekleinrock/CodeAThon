@@ -1,0 +1,109 @@
+// MIT license from https://github.com/andsens/blog-material/blob/master/radial-progress/step_10.html
+//Adapted to use the following HTML
+/*
+<div class="radial-progress" [attr.data-progress]="item.completed">
+<div class="circle">
+<div class="mask full">
+<div class="fill"></div>
+</div>
+<div class="mask half">
+<div class="fill"></div>
+<div class="fill fix"></div>
+</div>
+</div>
+<div class="inset">
+<div class="percentage"><i class="icon-check"></i>
+</div>
+</div>
+</div>
+*/
+.radial-progress {
+  $circle-size: 3em;
+  $circle-background: $gray-lighter;
+  $circle-color: $green;
+  $inset-size: 2.75em;
+  $inset-color: $white;
+  $transition-length: 1s;
+  $percentage-font-size: 1em;
+  $percentage-text-width: 2.5em;
+  width: $circle-size;
+  height: $circle-size;
+  background-color: $circle-background;
+  border-radius: 50%;
+  display: inline-block;
+
+  &-text {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0.75em;
+    margin-left: 1em;
+  }
+
+  .circle {
+    .fill,
+    .mask {
+      width: $circle-size;
+      height: $circle-size;
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .fill,
+    .mask {
+      -webkit-backface-visibility: hidden;
+      transition: -webkit-transform $transition-length;
+      transition: -ms-transform $transition-length;
+      transition: transform $transition-length;
+      border-radius: 50%;
+    }
+
+    .mask {
+      clip: rect(0, $circle-size, $circle-size, $circle-size/2);
+
+      .fill {
+        clip: rect(0, $circle-size/2, $circle-size, 0);
+        background-color: $circle-color;
+      }
+    }
+  }
+
+  .inset {
+    width: $inset-size;
+    height: $inset-size;
+    position: absolute;
+    margin-left: ($circle-size - $inset-size)/2;
+    margin-top: ($circle-size - $inset-size)/2;
+    background-color: $inset-color;
+    border-radius: 50%;
+
+    .percentage {
+      height: $percentage-font-size;
+      width: $percentage-text-width;
+      overflow: hidden;
+      position: absolute;
+      top: ($inset-size - $percentage-font-size) / 2;
+      left: ($inset-size - $percentage-text-width) / 2;
+      line-height: 1;
+      text-align: center;
+    }
+  }
+  $increment: 180deg / 100;
+  @for $i from 1 through 100 {
+    &[data-progress='#{$i}'] {
+      .circle {
+        .fill,
+        .mask.full {
+          transform: rotate($increment *$i);
+        }
+
+        .fill.fix {
+          transform: rotate($increment *$i *2);
+        }
+      }
+    }
+  }
+
+  &[data-progress='100'] {
+    color: $circle-color;
+  }
+}

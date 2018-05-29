@@ -1,0 +1,37 @@
+<div class="row">
+  <div class="col-md-12">
+    <h1>HIG UX KIT : Multiselect Tag / Pill</h1>
+    <ul>
+      <li>NPM Package: <a href="https://www.npmjs.com/package/chosen-js" target="_blank">ChosenJS Package</a></li>
+      <li>For more information, please navigate to <a href="https://github.com/harvesthq/chosen">ChosenJS Github</a></li>
+      <li><b>Note: </b>Be cautious with using the dropdown tag with a long list. If you were to put the selected tags on top/bottom/side then you might have to make adjustments programmatically.</li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <label for="chosen">Choose </label> <br/>
+    <div class="check-all"><a href="#" class="selectAll">Check All</a> </div>
+    <div class="uncheck-all"><a href="#" class="dselectAll">Uncheck All</a></div><br/>
+    <select name="" class="chosen" multiple>
+      <option value="1" selected>ADPM New Portal (99)</option>
+      <option value="2">Bond (47)</option>
+      <option value="3" selected>CL Expressway (48)</option>
+      <option value="4">e-BPP Admin (29)</option>
+      <option value="5" selected>Internal Claims Report (61)</option>
+    </select>
+  </div>
+</div><br>{{#if showcode}}
+<pre><code class="html">&lt;div class="col-xs-12"&gt;
+  &lt;label for="chosen"&gt;Choose &lt;/label&gt; &lt;br/&gt;
+  &lt;a href="#" class="selectAll"&gt;Check All&lt;/a&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#" class="dselectAll"&gt;Uncheck All&lt;/a&gt;&lt;br/&gt;
+  &lt;select name="" class="chosen" multiple&gt;
+    &lt;option value="1" selected&gt;ADPM New Portal (99)&lt;/option&gt;
+    &lt;option value="2"&gt;Bond (47)&lt;/option&gt;
+    &lt;option value="3" selected&gt;CL Expressway (48)&lt;/option&gt;
+    &lt;option value="4"&gt;e-BPP Admin (29)&lt;/option&gt;
+    &lt;option value="5" selected&gt;Internal Claims Report (61)&lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;
+</code></pre>
+{{/if}}

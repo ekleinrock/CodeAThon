@@ -1,0 +1,11 @@
+{{#if title}}
+  <div class="container">
+    <ul class="breadcrumb">
+      <li><a href="index.html"><i class="icon icon-house"></i> Home</a></li>
+      {{#if parent}}
+        <li>{{parent}}</li>
+      {{/if}}
+      <li class="active">{{title}}</li>
+    </ul>
+  </div>
+{{/if}}

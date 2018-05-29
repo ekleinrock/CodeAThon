@@ -1,0 +1,16 @@
+.form {
+  &-horizontal {
+    .control {
+      &-label {
+        text-align: left;
+      }
+    }
+    .form-group {
+      &.has-error {
+        .icon.icon-attention {
+          //top: -33px;
+        }
+      }
+    }
+  }
+}

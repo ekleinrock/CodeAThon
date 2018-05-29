@@ -1,0 +1,77 @@
+// PX to EM
+$baseline-px: 16;
+
+@function em($pixels, $context: $baseline-px) {
+  @return #{$pixels / $context}em
+}
+// PX to EM
+$baseline-px: 16;
+
+@function rem($pixels, $context: $baseline-px) {
+  @return #{$pixels / $context}rem
+}
+
+// Min width based off padding
+@function mwp($min-width, $padding) {
+  @return #{$min-width - (2 * $padding)}em
+}
+
+//Default button shadow
+
+@mixin btn-pressed-shadow($type: inset, $offset-x: 1px, $offset-y: 1px, $blur-radius: 2px, $color: $shadow-medium-deep) {
+  &.active,
+  &:active {
+    -moz-box-shadow: $type $offset-x $offset-y $blur-radius $color;
+    -webkit-box-shadow: $type $offset-x $offset-y $blur-radius $color;
+    box-shadow: $type $offset-x $offset-y $blur-radius $color;
+  }
+}
+
+@mixin btn-colors($bg-color, $hover-focus-color, $disabled, $font-color: $white, $font-color-disabled: $white, $font-color-hover: $white, $font-color-active-focus: $white) {
+  background-color: $bg-color;
+  color: $font-color;
+
+
+  &:hover,
+  &:hover:focus {
+    background-color: $hover-focus-color;
+    color: $font-color-hover;
+  }
+
+  &:focus {
+    background-color: $bg-color;
+    color: $font-color;
+  }
+
+  &.active,
+  &:active {
+    &.focus,
+    &:focus {
+      background-color: $hover-focus-color;
+      border-color: $hover-focus-color;
+      color: $font-color-active-focus;
+    }
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] {
+    background-color: $disabled;
+    color: $font-color-disabled;
+
+    &:focus,
+    &:hover {
+      background-color: $disabled;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      color: $font-color-disabled;
+    }
+  }
+}
+
+@mixin font-family($family: 'Arial', $size-in-em: 1em, $font-weight: 400) {
+  font-family: $family;
+  font-size: $size-in-em;
+  font-weight: $font-weight;
+}

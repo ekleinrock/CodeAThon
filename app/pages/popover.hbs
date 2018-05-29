@@ -1,0 +1,51 @@
+{{#> header/primary title="Popover"}} {{/header/primary}}
+
+  <div class="container card">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>HIG UX KIT : Popover</h1>
+
+        <p>For usage, please refer to <a href="https://getbootstrap.com/docs/3.3/javascript/#popovers">Bootstrap 3 Docs</a>.</p>
+        <blockquote><strong>Please note:</strong> there is a preexisting issue with popovers when placed incorrectly on mobile. See this <a href="https://github.com/twbs/bootstrap/issues/7399">Bootstrap Issue</a> for further explaination.  The easiest work-around is to use <code>data-placement</code> to place the popover for the best usage on mobile first.</blockquote>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>Dismissible Popover:</h3>
+        <button tabindex="0" class="btn btn-sm btn-secondary popover-dismissible" role="button" data-placement="top" data-html="true" data-toggle="popover" data-trigger="focus" title="Popover title <i class='popover-close icon icon-close'></i>" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">Dismissible popover</button>
+        <button tabindex="1" class="btn btn-sm btn-secondary popover-dismissible" role="button" data-placement="right" data-html="true" data-toggle="popover" data-trigger="focus" title="Popover title <i class='popover-close icon icon-close'></i>" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">Dismissible popover</button>
+        <button tabindex="2" class="btn btn-sm btn-secondary popover-dismissible" role="button" data-placement="bottom" data-html="true" data-toggle="popover" data-trigger="focus" title="Popover title <i class='popover-close icon icon-close'></i>" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">Dismissible popover</button>
+        <button tabindex="3" class="btn btn-sm btn-secondary popover-dismissible" role="button" data-placement="left" data-html="true" data-toggle="popover" data-trigger="focus" title="Popover title <i class='popover-close icon icon-close'></i>" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">Dismissible popover</button>
+      </div>
+    </div><br>
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>Code:</h3>
+        <h6>Custom Class: <code>popover-dismissible</code></h6>
+        <script src="https://gist.github.thehartford.com/rsoni/0af25dfa6021a5f52aef1a9c85edd19b.js"></script>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>Toggle Popover:</h3>
+        <button class="btn btn-sm btn-secondary popover-toggle" role="button" data-placement="top" data-html="true" data-toggle="popover" title="Popover title <i class='popover-close icon icon-close'></i>" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">Toggle popover</button>
+        <button class="btn btn-sm btn-secondary popover-toggle" role="button" data-placement="right" data-html="true" data-toggle="popover" title="Popover title <i class='popover-close icon icon-close'></i>" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">Toggle popover</button>
+        <button class="btn btn-sm btn-secondary popover-toggle" role="button" data-placement="bottom" data-html="true" data-toggle="popover" title="Popover title <i class='popover-close icon icon-close'></i>" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">Toggle popover</button>
+        <button class="btn btn-sm btn-secondary popover-toggle" role="button" data-placement="left" data-html="true" data-toggle="popover" title="Popover title <i class='popover-close icon icon-close'></i>" data-content="Lorem ipsum dolor sit amet, consectetur adipiscing elit.">Toggle popover</button>
+      </div>
+    </div><br>
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>Code: </h3>
+        <h6>Custom Class: <code>popover-toggle</code></h6>
+        <script src="https://gist.github.thehartford.com/rsoni/8f778e5a5b8b43b467b43f3f2aadc4e0.js"></script>
+      </div>
+    </div>
+  </div>
+  
+{{#> footer/primary}} {{/footer/primary}}
+{{#> footer/scripts}} {{/footer/scripts}}
+</body>
+</html>
+

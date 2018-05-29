@@ -1,0 +1,27 @@
+.disclaimer {
+  color: $gray;
+  float: none;
+
+  &-content {
+    font-family: $font-family-base;
+    font-size: 0.7em;
+    line-height: 1.3em;
+
+    a {
+      color: $blue-link;
+    }
+  }
+
+  &-footer {
+    float: none;
+
+    .disclaimer {
+      &-content {
+        color: $gray-light;
+        line-height: 1.5em;
+        font-size: 0.6em;
+        font-weight: 400;
+      }
+    }
+  }
+}

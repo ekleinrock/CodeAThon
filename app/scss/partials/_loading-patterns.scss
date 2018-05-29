@@ -1,0 +1,46 @@
+.fa,.icon {
+  &.fa-spinner, &.icon-spinner {
+    &.fa-pulse, &.icon-pulse {
+      font-size: 2.25em;
+      color: #B83B2F;
+      margin: 1rem;
+      &.fa-btn, &.icon-btn {
+        color: #fff;
+        font-size: 2em;
+        text-align: center;
+        vertical-align: top;
+        position: relative;
+        bottom: 0.15em;
+      }
+    }
+  }
+}
+
+.btn-load {
+  height: 2.85714em;
+}
+
+
+.btn.btn-secondary-paired.disabled {
+  .fa.fa-spinner.fa-pulse.fa-btn {
+    color: #B83B2F;
+  }
+}
+
+.btn.btn-primary.disabled {
+  background-color: $green;
+  color: $white;
+}
+
+.btn.btn-secondary.disabled {
+  background-color: $blue;
+  color: $white;
+}
+
+.btn.btn-primary.disabled,
+.btn.btn-secondary.disabled,
+.btn.btn-secondary-paired.disabled {
+  .fa.fa-spinner.fa-pulse.fa-btn {
+    margin: 0;
+  }
+}

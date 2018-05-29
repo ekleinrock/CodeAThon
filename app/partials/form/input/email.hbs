@@ -1,0 +1,18 @@
+<div class="form-group has-feedback">
+  <label for="email" class="control-label{{#if horizontal}} col-md-6{{/if}}">{{#if title}}{{title}}{{else}}Email{{/if}}{{#if help}}<span tabindex="0" class="form-help" id="help-{{name}}" data-trigger="focus" data-container="body" data-toggle="popover{{help-alt}}" title="{{help-title}}" data-content="{{help-text}}"></span>{{/if}}</label>{{#if horizontal}}
+  <div class="col-md-6">{{/if}}
+  <input type="email" class="form-control" id="email" name="email" placeholder="{{#if placeholder}}{{placeholder}}{{else}}Enter email here{{/if}}" pattern=".*@\w{2,}\.\w{2,}.*" required/>
+  {{#> form/input/error}}{{/form/input/error}}{{> @partial-block }}{{#if horizontal}}
+</div>{{/if}}
+</div>{{#if showcode}}
+<pre class="pre-scrollable"><code class="html">&lt;div class="form-group has-feedback"&gt;
+  &lt;label for="email" class="control-label {{#if horizontal}}col-md-6{{/if}}"&gt;Email&lt;/label&gt;{{#if horizontal}}
+  &lt;div class="col-md-6"&gt;{{/if}}
+  &lt;i class="icon icon-more-information pull-right" aria-hidden="true"&gt;&lt;/i&gt;
+  &lt;input type="email" class="form-control" id="email" name="email" placeholder="Enter email here"  pattern=".*@\w{2,}\.\w{2,}.*" required /&gt;
+  &lt;span class=&quot;icon icon-attention form-control-feedback&quot; aria-hidden=&quot;true&quot;&gt;&lt;/span&gt;
+  &lt;div class=&quot;help-block with-errors&quot;&gt;&lt;/div&gt;
+  {{#if horizontal}}
+  &lt;/div&gt;{{/if}}
+&lt;/div&gt;
+</code></pre>{{/if}}

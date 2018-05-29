@@ -1,0 +1,45 @@
+{{#> header/primary title="List Elements"}} {{/header/primary}}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 card">
+        <h1>List Elements</h1>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 card">
+        <h2>Benefit List</h2>
+        <ul  class="list-group benefit">
+          <li>List value goes here</li>
+          <li>List value goes here</li>
+          <li>List value goes here</li>
+        </ul>
+        <h2>Standard List</h2>
+        <ul class="list-group standard">
+          <li>List value goes here</li>
+          <li>List value goes here</li>
+          <li>List value goes here</li>
+        </ul>
+        <h2>Basic List</h2>
+        <ul class="list-group standard">
+          <li>List value goes here
+            <ul>
+              <li>List value goes here
+                <ul>
+                  <li>List value goes here</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <h2>Ordered List</h2>
+        {{#> ordered-list showcode="true"}}{{/ordered-list}}
+      </div>
+    </div>
+  </div>
+
+{{#> footer/primary}} {{/footer/primary}}
+{{#> footer/scripts}} {{/footer/scripts}}
+</body>
+</html>
+

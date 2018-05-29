@@ -1,0 +1,29 @@
+{{#> header/primary title="Input-fields"}}{{/header/primary}}
+
+<div class="container">
+  <div class="row card">
+      <div class="col-md-12">
+          <h1>HIG UX KIT : Input Fields</h1>
+
+      </div>
+  </div>
+  <div class="row card">
+    <div class="col-xs-12">
+      <div class="row input-fields-row">
+        <form class="form-selectors" data-toggle="validator" role="form">
+          {{#> form/input-fields showcode="true"}} {{/ form/input-fields}}
+          {{#> form/input/textarea showcode="true"}} {{/ form/input/textarea}}
+        </form>
+        <script type="text/javascript" src="/node_modules/cleave.js/dist/cleave.js"></script>
+        <script type="text/javascript" src="/app/js/input-masking.js"></script>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{#> footer/primary}} {{/footer/primary}}
+{{#> footer/scripts}} {{/footer/scripts}}
+</body>
+</html>
+

@@ -1,0 +1,41 @@
+.card {
+  background-color: $white;
+  border: 1px solid $gray-light;
+  margin-bottom: 1em;
+  padding: 1em;
+
+  &.xp {
+    padding: 1.429em;
+  }
+  &.xp2 {
+    padding: 2em;
+  }
+
+  &.offset {
+    -moz-box-shadow: 0 2px 8px $shadow-shallow;
+    -webkit-box-shadow: 0 2px 8px $shadow-shallow;
+    box-shadow: 0 2px 8px $shadow-shallow;
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
+
+    zoom: 1;
+  }
+
+  &.top {
+    border-top: 6px solid $gray-light;
+  }
+}
+
+.color-swatch {
+  height: 150px;
+  &-card {
+    border-radius: 50%;
+    height: 5em;
+    width: 5em;
+  }
+
+  &-title {
+    color: $gray-medium;
+    font-size: .75em;
+    padding-top: .5em;
+  }
+}

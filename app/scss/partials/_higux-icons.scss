@@ -1,0 +1,550 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "higux";
+  src: url("#{$theme-font-path}/higux.eot");
+  src: url("#{$theme-font-path}/higux.eot?#iefix") format('embedded-opentype'), url("#{$theme-font-path}/higux.woff") format('woff'), url("#{$theme-font-path}/higux.ttf") format('truetype'), url("#{$theme-font-path}/higux.svg#higux") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.cheatsheet {
+  list-style: none;
+  padding: 0;
+
+  li {
+    padding-bottom: 10px;
+  }
+
+  .icon {
+    display: inline-block;
+    font-family: higux;
+    margin-right: 10px;
+    font-style: normal;
+  }
+}
+
+[data-icon]:before {
+  font-family: "higux" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "higux" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+// for 3.3.0 version
+// .icon {
+//   display: inline-block;
+//   font: normal normal normal 1em/1 "higux";
+//   font-size: inherit;
+// }
+
+.icon-spin::before {
+  -webkit-animation: icon-spin 2s infinite linear;
+  animation: icon-spin 2s infinite linear;
+  display: inline-block;
+}
+
+.icon-pulse::before {
+  -webkit-animation: icon-spin 1s infinite steps(8);
+  animation: icon-spin 1s infinite steps(8);
+  display: inline-block;
+}
+
+@-webkit-keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+.icon-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.icon-rotate-180 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.icon-rotate-270 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.icon-flip-horizontal {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+.icon-flip-vertical {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+:root .icon-rotate-90,
+:root .icon-rotate-180,
+:root .icon-rotate-270,
+:root .icon-flip-horizontal,
+:root .icon-flip-vertical {
+  filter: none;
+}
+
+.icon-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+
+.icon-stack-1x,
+.icon-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.icon-stack-1x {
+  line-height: inherit;
+}
+
+.icon-stack-2x {
+  font-size: 2em;
+}
+
+.icon-2x {
+  font-size: 2em;
+}
+
+.icon-3x {
+  font-size: 3em;
+}
+
+
+.icon-accident-forgiveness-benefit:before {
+  content: "\e000";
+}
+.icon-add-function:before {
+  content: "\e001";
+}
+.icon-alert-content-not-available:before {
+  content: "\e002";
+}
+.icon-alert-not-authorized:before {
+  content: "\e003";
+}
+.icon-alert-warning:before {
+  content: "\e004";
+}
+.icon-attention:before {
+  content: "\e005";
+}
+.icon-atv-vehicle:before {
+  content: "\e006";
+}
+.icon-bank:before {
+  content: "\e007";
+}
+.icon-benefit-car-repair:before {
+  content: "\e008";
+}
+.icon-boat-insurance:before {
+  content: "\e009";
+}
+.icon-bullet-check-mark:before {
+  content: "\e00a";
+}
+.icon-bullet-not-valid:before {
+  content: "\e00b";
+}
+.icon-call:before {
+  content: "\e00c";
+}
+.icon-camera:before {
+  content: "\e00d";
+}
+.icon-car-primary-option:before {
+  content: "\e00e";
+}
+.icon-car-repair-benefit:before {
+  content: "\e00f";
+}
+.icon-car-secondary-option:before {
+  content: "\e010";
+}
+.icon-carousel-left:before {
+  content: "\e011";
+}
+.icon-carousel-right:before {
+  content: "\e012";
+}
+.icon-chat:before {
+  content: "\e013";
+}
+.icon-chat-question:before {
+  content: "\e014";
+}
+.icon-check-mark:before {
+  content: "\e015";
+}
+.icon-claims-hotline:before {
+  content: "\e016";
+}
+.icon-close:before {
+  content: "\e017";
+}
+.icon-condominium:before {
+  content: "\e018";
+}
+.icon-construction-worker:before {
+  content: "\e019";
+}
+.icon-deductible-waiver:before {
+  content: "\e01b";
+}
+.icon-disappearing-deductible:before {
+  content: "\e01c";
+}
+.icon-edit:before {
+  content: "\e01d";
+}
+.icon-help:before {
+  content: "\e01e";
+}
+.icon-house:before {
+  content: "\e01f";
+}
+.icon-id-card:before {
+  content: "\e020";
+}
+.icon-in-progress:before {
+  content: "\e021";
+}
+.icon-launch-video:before {
+  content: "\e022";
+}
+.icon-lifetime-renewability:before {
+  content: "\e023";
+}
+.icon-lightbulb:before {
+  content: "\e024";
+}
+.icon-menu:before {
+  content: "\e025";
+}
+.icon-minus:before {
+  content: "\e026";
+}
+.icon-money:before {
+  content: "\e027";
+}
+.icon-more-information:before {
+  content: "\e028";
+}
+.icon-my-account:before {
+  content: "\e029";
+}
+.icon-not-valid:before {
+  content: "\e02a";
+}
+.icon-notifications:before {
+  content: "\e02b";
+}
+.icon-one-deductible:before {
+  content: "\e02c";
+}
+.icon-plus:before {
+  content: "\e02d";
+}
+.icon-policy:before {
+  content: "\e02e";
+}
+.icon-present-benefits:before {
+  content: "\e02f";
+}
+.icon-print:before {
+  content: "\e030";
+}
+.icon-questions:before {
+  content: "\e031";
+}
+.icon-rate-protection:before {
+  content: "\e032";
+}
+.icon-recovery-care:before {
+  content: "\e033";
+}
+.icon-renters:before {
+  content: "\e034";
+}
+.icon-replacement-keys:before {
+  content: "\e035";
+}
+.icon-save:before {
+  content: "\e036";
+}
+.icon-save-or-view-pdf:before {
+  content: "\e037";
+}
+.icon-search:before {
+  content: "\e038";
+}
+.icon-secure:before {
+  content: "\e039";
+}
+.icon-settings:before {
+  content: "\e03a";
+}
+.icon-shopping-kart:before {
+  content: "\e03c";
+}
+.icon-star:before {
+  content: "\e03d";
+}
+.icon-update:before {
+  content: "\e03e";
+}
+.icon-view:before {
+  content: "\e03f";
+}
+.icon-view-hidden:before {
+  content: "\e040";
+}
+.icon-waiver-deductible:before {
+  content: "\e041";
+}
+.icon-wallet:before {
+  content: "\e042";
+}
+.icon-check:before {
+  content: "\e048";
+}
+.icon-email:before {
+  content: "\e049";
+}
+.icon-exclamation:before {
+  content: "\e04a";
+}
+.icon-benefits:before {
+  content: "\e04b";
+}
+.icon-billing:before {
+  content: "\e04c";
+}
+.icon-document:before {
+  content: "\e04d";
+}
+.icon-dashboard:before {
+  content: "\e04e";
+}
+.icon-folder:before {
+  content: "\e04f";
+}
+.icon-users:before {
+  content: "\e050";
+}
+.icon-double-caret:before {
+  content: "\e051";
+}
+.icon-primative-dot:before {
+  content: "\e043";
+}
+.icon-caret-down:before {
+  content: "\e044";
+}
+.icon-caret-left:before {
+  content: "\e045";
+}
+.icon-caret-right:before {
+  content: "\e046";
+}
+.icon-caret-up:before {
+  content: "\e047";
+}
+.icon-trash:before {
+  content: "\e053";
+}
+.icon-dollar:before {
+  content: "\e052";
+}
+.icon-audit:before {
+  content: "\e054";
+}
+.icon-claims:before {
+  content: "\e055";
+}
+.icon-documents:before {
+  content: "\e056";
+}
+.icon-general-liability:before {
+  content: "\e057";
+}
+.icon-policies:before {
+  content: "\e058";
+}
+.icon-secure-1:before {
+  content: "\e059";
+}
+.icon-video:before {
+  content: "\e05a";
+}
+.icon-workers-comp:before {
+  content: "\e05b";
+}
+.icon-property:before {
+  content: "\e05c";
+}
+.icon-umbrella:before {
+  content: "\e05d";
+}
+.icon-user:before {
+  content: "\e05e";
+}
+.icon-pdf:before {
+  content: "\e05f";
+}
+.icon-date-picker:before {
+  content: "\e01a";
+}
+.icon-shield:before {
+  content: "\e03b";
+}
+.icon-refresh:before {
+  content: "\e067";
+}
+.icon-twitter:before {
+  content: "\e060";
+}
+.icon-youtube:before {
+  content: "\e061";
+}
+.icon-spinner:before {
+  content: "\e062";
+}
+.icon-google-plus:before {
+  content: "\e063";
+}
+.icon-caret-down-alt:before {
+  content: "\e064";
+}
+.icon-caret-left-alt:before {
+  content: "\e065";
+}
+.icon-caret-right-alt:before {
+  content: "\e066";
+}
+.icon-caret-up-alt:before {
+  content: "\e068";
+}
+.icon-linkedin:before {
+  content: "\e069";
+}
+.icon-facebook:before {
+  content: "\e06a";
+}
+.icon-play:before {
+  content: "\e06b";
+}
+.icon-sort-down:before {
+  content: "\e06c";
+}
+.icon-sort-up:before {
+  content: "\e06d";
+}
+.icon-fax:before {
+  content: "\e06e";
+}
+.icon-scales:before {
+  content: "\e072";
+}
+.icon-group-benefits:before {
+  content: "\e073";
+}
+.icon-car-alt:before {
+  content: "\e074";
+}
+.icon-general-pro-liability:before {
+  content: "\e06f";
+}
+.icon-general-liability-alt:before {
+  content: "\e070";
+}
+.icon-percentage:before {
+  content: "\e071";
+}
+.icon-stop:before {
+  content: "\e075";
+}
+.icon-start-issue:before {
+  content: "\e076";
+}
+.icon-tree:before {
+  content: "\e077";
+}
+.icon-computer:before {
+  content: "\e078";
+}
+.icon-chat-menu:before {
+  content: "\e079";
+}
+.icon-certificate-of-insurance:before {
+  content: "\e07a";
+}
+.icon-doc:before {
+  content: "\e07b";
+}
+.icon-manage-users:before {
+  content: "\e07c";
+}
+.icon-spreadsheet:before {
+  content: "\e07d";
+}
+.icon-esign:before {
+  content: "\e080";
+}

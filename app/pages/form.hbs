@@ -1,0 +1,75 @@
+{{#> header/primary title="Forms"}}{{/header/primary}}
+
+  <div class="container">
+    <div class="row card top">
+      <div class="col-md-12">
+        <h1>HIG UX KIT : All Form Samples<button type="button" name="button" class="btn btn-secondary btn-xs show-errors-btn pull-right">Show Error States</button></h1>
+        <p>Forms should be formatted to <a href="https://getbootstrap.com/docs/3.3/css/#forms">Bootstrap 3.3</a> form standards. Validation is using the <a href="https://github.com/1000hz/bootstrap-validator">bootstrap-validator</a> plugin.</p>
+      </div>
+    </div>
+    <div class="row card">
+      <div class="col-md-12">
+        <form class="form-selectors" data-toggle="validator" role="form">
+          <div class="input-fields-row">
+            {{#> form/input-fields}} {{/ form/input-fields}}
+          </div>
+
+          <!-- Radio & Checkbox Selector (start) -->
+          <div class="radio-checkbox-row">
+            {{#> form/rad-and-cbox-selectors}} {{/ form/rad-and-cbox-selectors}}
+          </div>
+          <!-- Radio & Checkbox Selector (end) -->
+          <!-- Field selector (start) -->
+          <div class="row field-selectors-row">
+            {{#> form/field-selectors}} {{/ form/field-selectors}}
+          </div>
+          <!-- Field selector (end) -->
+          <!-- Tile selector (start) -->
+          <div class="row">
+            <div class="col-md-12">
+              <div>
+                {{#> form/tile-selectors}} {{/ form/tile-selectors}}
+              </div>
+            </div>
+          </div>
+          <!-- Tile selector (end) -->
+          <!-- Textarea (start) -->
+          <div class="row">
+            {{#> form/input/textarea}} {{/ form/input/textarea}}
+          </div>
+          <!-- Textarea (end) -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-group">
+                <button type="submit" class="btn btn-secondary">Submit</button>
+              </div>
+            </div>
+          </div>
+        </form>
+        <form class="form-horizontal" data-toggle="validator" role="form">
+          {{#> form/input-fields-horiz}} {{/ form/input-fields-horiz}}
+        </form>
+        <div class="content-block">
+          <h3>H3 Relative Header Style</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean facilisis dignissim est, a luctus enim ultrices nec. Nullam ut mauris odio. Donec scelerisque est ac lacinia iaculis. Morbi et enim urna. Duis posuere mattis ultricies. Mauris posuere
+            fringilla dapibus. Cras convallis eget lorem ut tempus. Phasellus non eros neque. Quisque tincidunt id lacus ut tempor. Etiam imperdiet felis vel fringilla condimentum. Maecenas placerat varius ante et laoreet. Nulla pharetra ut neque at auctor.
+            Donec suscipit lorem quis turpis pretium hendrerit.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Toggle selector (start) -->
+    <div class="row">
+      <div class="col-md-12 card">
+        <div class="row">
+          {{#> form/toggle-selector}} {{/ form/toggle-selector}}
+          {{#> form/toggle-selector-less-padding}} {{/ form/toggle-selector-less-padding}}
+        </div>
+      </div>
+    </div>
+    <!-- Toggle selector (end) -->
+  </div>
+
+{{#> footer/primary}} {{/footer/primary}}
+{{#> footer/scripts}} {{/footer/scripts}}
+</body>
+</html>

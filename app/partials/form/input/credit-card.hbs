@@ -1,0 +1,27 @@
+<div class="form-group has-feedback credit-card-input">
+  <label for="ccn" class="control-label{{#if horizontal}} col-md-6{{/if}}">Credit Card Number</label>{{#if horizontal}}
+  <div class="col-md-6">{{/if}}
+  <div class="input-group">
+    <span class="input-group-addon"><i class="icon icon-secure"></i></span>
+    <input id="ccn" data-minlength="15" class="form-control" name="ccn" placeholder="CCN" required />
+    <span class="input-group-addon icon icon-camera"></span>
+  </div>
+  <small class="help-block">Mininum 15 characters</small>
+  {{#> form/input/error}}{{/form/input/error}}{{#if horizontal}}
+</div>{{/if}}
+</div>{{#if showcode}}
+<pre class="pre-scrollable"><code class="html">&lt;div class="form-group has-feedback credit-card-input"&gt;
+  &lt;label for="ccn" class="control-label{{#if horizontal}} col-md-6{{/if}}"&gt;Credit Card Number&lt;/label&gt;{{#if horizontal}}
+  &lt;div class="col-md-6"&gt;{{/if}}
+  &lt;div class="input-group"&gt;
+    &lt;span class="input-group-addon"&gt;&lt;i class="icon icon-secure"&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;input id="ccn" data-minlength="15" class="form-control" name="ccn" placeholder="CCN" required /&gt;
+    &lt;span class="input-group-addon icon icon-camera"&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;small class="help-block"&gt;Mininum 15 characters&lt;/small&gt;
+  &lt;span class="icon icon-attention form-control-feedback" aria-hidden="true"&gt;&lt;/span&gt;
+  &lt;div class="help-block with-errors"&gt;&lt;/div&gt;
+  {{#if horizontal}}
+&lt;/div&gt;{{/if}}
+&lt;/div&gt;
+</code></pre>{{/if}}

@@ -1,0 +1,48 @@
+.carousel-alt {
+  &-indicators {
+    li {
+      height: 12px;
+      width: 12px;
+      margin: 0 3px;
+    }
+
+    &.active {
+      height: 12px;
+      width: 12px;
+      margin: 0 3px;
+    }
+  }
+  @media #{$gt-mobile} {
+    .carousel-caption {
+      position: relative;
+    }
+  }
+}
+
+.item {
+  .carousel-caption {
+    background-color: $blue-active;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.7;
+    position: relative;
+
+    h3 {
+      color: $white;
+      $font-size-small: ceil(($font-size-base * 0.875)) !default; // ~14px
+      margin-bottom: 5px;
+      text-align: left;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    p {
+      font-size: 12px;
+      $font-size-small: ceil(($font-size-base * 0.875)) !default; // ~14px
+      text-align: left;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}

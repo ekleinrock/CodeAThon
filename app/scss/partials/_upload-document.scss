@@ -1,0 +1,126 @@
+.dropzone {
+  border: 1px dashed $gray-medium;
+  border-radius: 0;
+  background-color: $gray-background;
+  padding: 1em;
+  color: $blue;
+  max-width: 600px;
+
+  &:hover {
+    border-color: $blue;
+  }
+
+  &.dz-drag-hover {
+    border-style: dashed;
+    border-color: $blue-link;
+  }
+  &.dz-message {
+    margin: 3em 0;
+  }
+
+  .dz-default {
+    .defaultText {
+      margin-bottom: 0.5em;
+    }
+  }
+  .dz-preview {
+    display: block;
+
+    &.dz-file-preview .dz-image {
+      border-radius: 0;
+      background: none;
+    }
+
+    &.dz-image-preview {
+      background-color: transparent;
+    }
+
+    &.dz-error .dz-error-message {
+      //display: none;
+      opacity: 1;
+      top: 0;
+      left: 5em;
+      background: none;
+      color: #D03E3E;
+      width: auto;
+      z-index: 1;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &.dz-error {
+      .dz-image {
+        // i {
+        //   color: $red-error;
+        // }
+      }
+    }
+
+    .dz-image {
+      width: 55px;
+      height: 60px;
+      border-radius: 0;
+
+      i {
+        font-size: 3.5em;
+      }
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .dz-details {
+      display: none;
+    }
+    .dz-progress .dz-upload {
+      background: $green;
+    }
+    .dz-error-mark,
+    .dz-success-mark {
+      margin-left: 0;
+      margin-top: 0;
+      right: 0;
+      left: 100%;
+      top: 35%;
+      font-family: "higux";
+    }
+
+    // .dz-success-mark {
+    //   color: $green;
+    // }
+
+    // .dz-error-mark {
+    //   color: $red-error;
+    // }
+
+    .dz-progress {
+      position: relative;
+      left: 0;
+      margin-left: 0;
+      width: 100%;
+      margin-top: -0.2em;
+      margin-left: 8.5vw;
+      height: 1em;
+      max-width: 412px;
+      border-radius: 0;
+    }
+
+    .dz-error-text,
+    .dz-success-text {
+      position: relative;
+      top: -3.85em;
+      left: 5em;
+    }
+
+    .dz-error-text {
+      color: #D03E3E;
+    }
+  }
+}
+// .dropzone .dz-preview.dz-error .dz-progress .dz-upload,
+// .dropzone-previews .dz-preview.dz-error .dz-progress .dz-upload {
+//   background: $blue-link;
+// }

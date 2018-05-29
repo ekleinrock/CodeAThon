@@ -1,0 +1,24 @@
+<div class="form-group">
+  <label for="currency-field" class="control-label{{#if horizontal}} col-md-6{{/if}}">Currency Field</label>{{#if horizontal}}
+  <div class="col-md-6">{{/if}}
+  <div class="input-group">
+    <span class="input-group-addon">$</span>
+    <input id='currency-field' type="text" class="form-control" name="currency-field" required>
+  </div>
+  {{#> form/input/error}}{{/form/input/error}}{{#if horizontal}}
+</div>{{/if}}
+</div>{{#if showcode}}
+<pre class="pre-scrollable"><code class="html">
+  &lt;div class="form-group"&gt;
+    &lt;label for="currency-field" class="control-label{{#if horizontal}} col-md-6{{/if}}"&gt;Currency Field&lt;/label&gt;{{#if horizontal}}
+    &lt;div class="col-md-6"&gt;{{/if}}
+    &lt;div class="input-group"&gt;
+      &lt;span class="input-group-addon"&gt;$&lt;/span&gt;
+      &lt;input id='currency-field' type="text" class="form-control" name="currency-field" required&gt;
+    &lt;/div&gt;
+    &lt;span class="icon icon-attention form-control-feedback" aria-hidden="true"&gt;&lt;/span&gt;
+    &lt;div class="help-block with-errors"&gt;&lt;/div&gt;
+{{#if horizontal}}
+&lt;/div&gt;{{/if}}
+&lt;/div&gt;
+</code></pre>{{/if}}

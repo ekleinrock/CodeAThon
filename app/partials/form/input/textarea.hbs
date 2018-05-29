@@ -1,0 +1,29 @@
+<div class="col-xs-5">
+  <div class="form-group has-feedback">
+    <label for="comment">Textarea:</label>
+    <textarea class="form-control" rows="5" id="comment" required></textarea>
+    {{#> form/input/error}}{{/form/input/error}}
+  </div>
+
+
+  {{#if showcode}}
+  <pre class="pre-scrollable"><code class="html">&lt;div class="form-group has-feedback"&gt;
+    &lt;label for="comment"&gt;Textarea:&lt;/label&gt;
+    &lt;textarea class="form-control" rows="5" id="comment" required&gt;&lt;/textarea&gt;
+    &lt;span class="icon icon-attention form-control-feedback" aria-hidden="true"&gt;&lt;i class="fa fa-caret-down"&gt;&lt;/i&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  </code></pre>{{/if}}
+
+  <div class="form-group has-feedback">
+    <label for="comment">Textarea (disabled):</label>
+    <textarea class="form-control" rows="5" id="comment" disabled></textarea>
+    <span class="icon icon-attention form-control-feedback" aria-hidden="true"><i class="fa fa-caret-down"></i></span>
+  </div>
+  {{#if showcode}}
+  <pre class="pre-scrollable"><code class="html">&lt;div class="form-group has-feedback"&gt;
+    &lt;label for="comment"&gt;Textarea (disabled):&lt;/label&gt;
+    &lt;textarea class="form-control" rows="5" id="comment" disabled&gt;&lt;/textarea&gt;
+    &lt;span class="icon icon-attention form-control-feedback" aria-hidden="true"&gt;&lt;i class="fa fa-caret-down"&gt;&lt;/i&gt;&lt;/span&gt;
+  &lt;/div&gt;
+  </code></pre>{{/if}}
+</div>

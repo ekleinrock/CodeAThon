@@ -1,0 +1,16 @@
+.form-help {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  margin-left:.625em;
+  &.alt {
+    position: absolute;
+    top:.5em;
+    right: 0;
+  }
+  &:after {
+    content: "\e028";
+    font-family: "higux";
+    font-size: 1em;
+  }
+}
